@@ -1,0 +1,42 @@
+
+.ttp-slider-1
+	display: none
+	// position: absolute
+	// top: -80px
+	box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.29)
+	margin-top: r(-80px)
+	background: #fff
+	+pad(r(34px) null)
+	.list-items
+		margin-bottom: 0
+		.item
+			+flex-center()
+			img
+				max-width: 100%
+			&:hover, &:active, &:focus
+				outline: none
+		
+		.slick-prev 
+			z-index: 999
+			&:before
+				content: "\e875"
+				font-family: "Linearicons-Free"
+				position: absolute
+				left: 2rem
+				top: 50%
+				font-size: r(30px)
+				transform: translateY(-50%)
+				color: color-get($mau,text-9)
+
+		.slick-next
+			z-index: 999
+			&:before
+				font-size: r(30px)
+				right: 2rem
+				color: color-get($mau,text-9)
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				content: "\e876"
+				font-family: "Linearicons-Free"
+			
