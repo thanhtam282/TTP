@@ -12,6 +12,8 @@ header.cc-header
 			.main-navbar
 				.toolbar
 					.search
+						.search-toggle
+							span.fas.fa-search
 						.search-panel
 							.search-turn-off
 								span.fas.fa-times
@@ -24,8 +26,9 @@ header.cc-header
 							| 0907 208 438
 					.cart
 						.cart-toggle
-							span.fas.fa-shopping-cart
-							span.product-count 3
+							.icon
+								span.fas.fa-shopping-cart
+								span.amount 3
 					
 					.language
 						.current-lang
@@ -52,3 +55,4 @@ header.cc-header
 							a.nav-link(href="contact.html") Liên hệ
 			.menu-toggle
 				span.fas.fa-bars
+	.backdrop

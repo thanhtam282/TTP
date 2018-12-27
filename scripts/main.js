@@ -1,9 +1,5 @@
 ////// GLOBAL ////////
-function display_search() {
-	$('.search').click(function () {
-		$('.searchbox').toggleClass('active')
-	})
-}
+
 const moveLanguage = () => {
 	return new MappingListener({
 		selector: '.language',
@@ -11,6 +7,16 @@ const moveLanguage = () => {
 		desktopMethod: 'appendTo',
 		mobileWrapper: '.main-navbar .nav',
 		mobileMethod: 'appendTo',
+		breakpoint: 992,
+	}).watch();
+}
+const movehotline = () => {
+	return new MappingListener({
+		selector: '.hot-line',
+		desktopWrapper: '.toolbar',
+		desktopMethod: 'appendTo',
+		mobileWrapper: '.main-navbar .nav',
+		mobileMethod: 'prependTo',
 		breakpoint: 992,
 	}).watch();
 }
@@ -53,16 +59,18 @@ function turnoffSearch() {
 }
 
 function toggleSearch() {
-		$('.cc-header .search-toggle').on('click', function () {
-			$('.cc-header .search-panel').toggleClass('active')
-		})
-	}
+	$('.cc-header .search-toggle').on('click', function () {
+		$('.cc-header .search-panel').toggleClass('active')
+	})
+}
+
 function toggleMainNav() {
 	$('.cc-header .menu-toggle').on('click', function () {
 		$('.cc-header .nav').toggleClass('active')
-		$('.cc-header .backdrop').fadeToggle(400)
+		$('.cc-header .backdrop').toggleClass('active')
 	})
 }
+
 function closeMainNav() {
 	$('.backdrop').on('click', function () {
 		console.log(1);
@@ -84,19 +92,38 @@ function closeCart() {
 	})
 }
 
-// function addBackdrop(x: any) {
-// 	if (x.matches) { // If media query matches
-// 		$('header').append('<div class="backdrop"></div>')
-// 	} else {
-// 		$('.backdrop').remove()
-// 	}
+// function addBackdrop() {
+// 	$('.cc-header .menu-toggle').on('click', function () {
+// 		if ($('header .backdrop').length) { // If media query matches
+// 			$('header .backdrop').remove()
+// 		} else {
+// 			$('header').append('<div class="backdrop"></div>')
+// 			// $('.cc-header .backdrop').fadeToggle(400)
+// 		}
+// 		// $('.cc-header .nav').toggleClass('active')
+// 	})
 // }
+
+
+$(function () {
+	$('.backdrop').on('click', function() {
+		console.log(1)
+		$('.cc-header .nav').toggleClass('active')
+		$('.cc-header .backdrop').toggleClass('active')
+
+		// $('.backdrop').remove()
+	})
+
+	
+})
+
 function toggleLang() {
 	$('.cc-header .language').on('click', function () {
 		$(this).find('ul').slideToggle(300)
 	})
 }
-function  toggleUser() {
+
+function toggleUser() {
 	$('.user').click(function () {
 		$(this).find('.user-panel').fadeToggle(500)
 	})
@@ -164,7 +191,7 @@ var slider_home = () => {
 };
 
 
-var  setHeightH3 = () => {
+var setHeightH3 = () => {
 	var maxHeight = 0;
 
 	$('.phanam-intro-about-us-3 .block-wrapper .info-wrapper').each(function () {
@@ -180,17 +207,20 @@ var  setHeightH3 = () => {
 
 ///////// MAIN Control /////
 $(document).ready(function () {
-
-	// moveLanguage();
-	// moveCart();
+	
+	// off_menu();
+	moveSearch();
+	movehotline();
+	moveCart();
+	moveLanguage();
+	// addBackdrop();
 	// moveUser();
-	// moveSearch();
-	// turnoffSearch();
-	// toggleMainNav();
+	turnoffSearch();
+	toggleMainNav();
 	// closeMainNav();
 	// toggleCart();
 	// closeCart()
-	// toggleSearch();
+	toggleSearch();
 	toggleLang();
 	/// END GLOBAL ///
 	/// HEADER ///
@@ -206,7 +236,7 @@ $(document).ready(function () {
 // $(window).resize(function () { 
 // 	if ($(window).width() < 768 ){
 // 		setHeightH3()
-		
+
 // 	}
-	
+
 // });
