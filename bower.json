@@ -1,0 +1,40 @@
+{
+  "name": "gulp4-source",
+  "version": "2.0.0",
+  "description": "This is a source for building HTML, CSS, Javascript automatically",
+  "main": "gulpfile.babel.js",
+  "homepage": "https://facebook.com/vuson2510",
+  "authors": [
+    "sonvh2510"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sonvh2510/001.Gulp4-Basic"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "dist"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "bootstrap": "^4.1.3",
+    "offline": "0.7.19",
+    "mdi": "^3.0.39",
+    "linearicons": "^1.0.1",
+    "font-awesome": "^5.5.0",
+    "animate.css": "^3.5.2",
+    "owl.carousel": "^2.3.4",
+    "fancybox": "^3.5.6",
+    "swiper": "^4.4.2",
+    "k-sass-core": "^6.0.4",
+    "sticky-footer": "https://github.com/cferdinandi/sticky-footer.git#^4.2.0",
+    "slick-carousel": "^1.8.1",
+    "lightgallery": "^1.6.11",
+    "aos": "^2.3.4"
+  }
+}

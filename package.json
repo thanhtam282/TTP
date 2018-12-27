@@ -1,0 +1,40 @@
+{
+	"name": "gulp4-source",
+	"version": "2.1.0",
+	"description": "This is a source for building HTML, CSS, Javascript automatically",
+	"main": "gulpfile.babel.js",
+	"homepage": "https://facebook.com/vuson2510",
+	"scripts": {
+		"test": "test",
+		"start": "gulp",
+		"build": "gulp build",
+		"min": "gulp minify"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/sonvh2510/001.Gulp4-Basic"
+	},
+	"author": "sonvh2510",
+	"license": "MIT",
+	"devDependencies": {
+		"@babel/core": "^7.1.6",
+		"@babel/preset-env": "^7.1.6",
+		"@babel/register": "^7.0.0",
+		"browser-sync": "^2.26.3",
+		"del": "^3.0.0",
+		"fs": "0.0.1-security",
+		"gulp": "^4.0.0",
+		"gulp-autoprefixer": "^6.0.0",
+		"gulp-babel": "^8.0.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-cssnano": "^2.1.3",
+		"gulp-imagemin": "^5.0.3",
+		"gulp-pug": "^4.0.1",
+		"gulp-rename": "^1.4.0",
+		"gulp-sass": "^4.0.2",
+		"gulp-sourcemaps": "^2.6.4",
+		"gulp-uglify-es": "^1.0.4",
+		"gulp-watch": "^5.0.1",
+		"node-sass": "^4.10.0"
+	}
+}

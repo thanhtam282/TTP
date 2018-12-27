@@ -1,0 +1,44 @@
+.phanam-home-2
+	background: #ade0ff
+	+pad(r(120px) null)
+	+media-breakpoint-down(md)
+		+pad(r(60px) null)
+		+pad(r(60px) null)
+	+media-breakpoint-down(sm)
+		+pad(2.875rem null)
+
+	.wrapper
+		+flex-center()
+		flex-direction: column
+		h2
+			+head-title(dark)
+		p
+			+fz(r(18px))
+		+media-breakpoint-down(sm)
+			font-size: 1rem
+			padding-top: 1rem
+		.btn-more
+			position: relative
+			font-weight: 300
+			text-transform: uppercase
+			opacity: .5
+			margin-top: r(40px)
+			width: r(176px)
+			height: r(36px)
+			+fz(r(15px))
+			+flex-center()
+			color: #6da5cd
+			border: 2px solid #6da5cd
+			border-radius: r(20px)
+			overflow: hidden
+			transition: .5s all ease-in-out
+			+media-breakpoint-up(md)
+				&:hover
+					background: transparent
+					box-shadow: 0px 0px 0px 50px color-get($mau,dark) inset
+					color: #6da5cd
+			+media-breakpoint-down(sm)
+				background: transparent
+				box-shadow: 0px 0px 0px 50px color-get($mau,dark) inset
+				color: #6da5cd
+				opacity: 1

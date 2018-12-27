@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800&subset=vietnamese')
+@font-face 
+	font-family: 'Material Icons'
+	font-style: normal
+	font-weight: 400
+	src: url(https://fonts.gstatic.com/s/materialicons/v41/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2')
+
+
+// @import ../node_modules/bootstrap/scss/bootstrap
+
+.phanam-header-1
+	.Module, .ModuleContent
+		height: 100%
+
+// main
+// 	overflow: hidden
+
+p ,ul ,h1,h2,h3,h4,h5,h6,figure,div, *
+	margin: 0
+	padding: 0
+	font-weight: 300
+p
+	font-size: r(15px)
+	line-height: r(23px)
+strong
+	font-weight: 600
+	font-size: r(15px)
+	
+html, body
+	font-family:  'Montserrat', sans-serif
+	font-size: 16px
+	line-height: 1.5
+	font-weight: 300
+
+.material-icons
+	font-family: 'Material Icons'
+	font-style: normal
+	font-weight: 300
+	+fz(1rem)
+
+.head-title
+	text-align: center
+	+fz(r(30px))
+	text-transform: uppercase
+	color: color-get($mau,dark)
+	font-weight: 600
+	+media-breakpoint-down(sm)
+		+fz(1.5rem)
+=head-title($color)
+	text-align: center
+	+fz(r(30px))
+	text-transform: uppercase
+	color: color-get($mau,$color)
+	font-weight: 600
+	+media-breakpoint-down(sm)
+		+fz(1.5rem)
+// @media (min-width: 1500px)
+// 	.container
+// 		max-width: 1400px

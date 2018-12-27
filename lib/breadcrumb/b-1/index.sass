@@ -1,0 +1,53 @@
+.phanam-breadcrumb-1
+	position: relative
+	background: rgba(0,106,182,.5)
+	margin-top: r(-48px)
+
+	.main-breadcrumb
+		width: 100%
+		z-index: 100
+		+media-breakpoint-up(md)
+			display: block
+		ol
+			margin-bottom: 0
+			+bor-rad(0)
+			+pad(0)
+			position: relative
+			background: none
+			li
+				+fz(r(15px))
+				font-weight: 300
+				+pad(.75rem .5rem)
+				padding-right: 0
+				position: relative
+				line-height: 1.5rem
+				color: color-get($mau,trang)
+				display: flex
+				align-items: center
+				&:first-child
+					padding-left: 0
+					padding-right: 0
+					a
+						display: flex
+						font-size: 0
+						&:before
+							content: "home"
+							font-family: "Material Icons"
+							font-size: r(15px)
+							cursor: pointer
+						&:hover
+							text-decoration: none
+							
+				a
+					color: color-get($mau,trang)
+					
+
+				+ li
+					&:before
+						padding-right: .5rem
+						color: color-get($mau,trang)
+						content: "\F13E"
+						font: normal normal normal 24px/1 "Material Design Icons"
+						line-height: 1
+						+fz(r(14px))
+						overflow: hidden

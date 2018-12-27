@@ -1,0 +1,100 @@
+.phanam-footer-1
+	padding-top: r(40px)
+	position: relative
+	&:after
+		z-index: -1
+		position: absolute
+		display: block
+		+wh(100%)
+		content: ""
+		background-image: linear-gradient(transparent 43%,#032035 124%)
+		background-image: -moz-linear-gradient( 90deg, rgb(0,106,182) 0%, rgb(108,173,227) 100%)
+		background-image: -webkit-linear-gradient( 90deg, rgb(0,106,182) 0%, rgb(108,173,227) 100%)
+		background-image: -ms-linear-gradient( 90deg, rgb(0,106,182) 0%, rgb(108,173,227) 100%)
+		bottom: 0
+
+
+
+	.nav
+		margin-bottom: r(5px)
+		justify-content: center
+		align-items: center
+		.nav-item
+			+pad(null r(25px))
+			+media-breakpoint-down(md)
+				flex: 0 0 33.3333%
+				padding-top: .5rem
+				text-align: center
+			+media-breakpoint-down(sm)
+				flex: 0 0 50%
+				white-space: nowrap
+			// +media-breakpoint-down(xs)
+			@media (max-width: 430px)
+				flex: 0 0 100%
+			.nav-link
+				+pad( 0 )
+				color: color-get($mau,trang)
+				text-transform: uppercase
+				font-size: r(14px)
+				+media-breakpoint-up(md)
+					&:hover
+						text-decoration: underline
+	
+	.info-wrapper, .copyright
+		+pad(1rem null)
+		color: color-get($mau,trang)
+		text-align: center
+		line-height: r(26px)
+		h3
+			font-weight: 600
+			+fz(r(14px))
+			text-transform: uppercase
+			padding-bottom: .5rem
+		h4, p
+			font-weight: 300
+			font-size: r(14px)
+			line-height: r(26px)
+
+		a
+			color: color-get($mau,trang)
+	.info-wrapper
+		padding-bottom: r(30px)
+	.bot-wrapper
+		display: flex
+		justify-content: space-between
+		max-width: r(1150px)
+		margin: auto
+		border-top: 1px solid color-rgba(color-get($mau,trang),.5)
+		+media-breakpoint-down(md)
+			flex-direction: column-reverse
+		.copyright
+			+pad(1trem null)
+			
+			
+		.social-wrapper
+			// opacity: .5
+			+flex-center()
+			// +pad(r(60px) null r(20px) null)
+			a
+				+mar(null 8px)
+				+media-breakpoint-up(lg)
+					// +mar(null .5rem)
+				+media-breakpoint-up(xl)
+					// +mar(null 1rem)
+				// +wh(r(35px))
+				// +bor-rad(50%)
+				background: transparent
+				// border: 1px solid color-get($mau,trang)
+				transition: .3s all ease-in-out
+				+flex-center()
+				em
+					color: color-get($mau,trang)
+					// +fz(r(20px))
+				&:hover
+					text-decoration: none
+				+media-breakpoint-up(lg)
+					&:hover
+						em
+							color: color-get($mau,dark)
+				+media-breakpoint-down(md)
+					padding-top: 1rem

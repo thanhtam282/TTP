@@ -1,0 +1,130 @@
+.cart
+	.cartpanel
+		position: absolute
+		top: 50px
+		right: 0
+		box-shadow: 0 0 5px color-get($mau, main)
+		width: 290px
+		display: none
+		z-index: 3000
+		transition: all .3s ease-in-out
+		+media-breakpoint-up(sm)
+			width: 360px
+		// +media-breakpoint-down(xs)
+		// 	max-width: 100%
+		&.open
+			display: block
+		&:before
+			content: ''
+			position: absolute
+			border-left: 7px solid transparent
+			border-right: 7px solid transparent
+			border-bottom: 10px solid color-get($mau, main)
+			bottom: 100%
+			right: 42px
+		.title
+			background: color-get($mau, main)
+			color: color-get($mau, trang)
+			padding: 0 10px
+			font-size: .9rem
+			line-height: 40px
+			a
+				color: color-get($mau, trang)
+				line-height: 40px
+				&:hover
+					text-decoration: underline
+					color: color-get($mau, trang)
+		.btn-closecart
+			position: absolute
+			font-size: r(20px)
+			color: color-get($mau,trang)
+			line-height: 1
+			top: 9px
+			right: 10px
+			cursor: pointer
+			span
+				background: transparent
+				border-radius: 50%
+		.cart-list
+			padding: 0 10px
+			background: white
+			max-height: 300px
+			overflow-y: auto
+			ul
+				list-style-type: none
+				padding-left: 0
+				margin-bottom: 0
+				li
+					padding: 10px 0 15px 0
+					border-bottom: 1px dashed rgba(0,0,0,.1)
+					display: flex
+					.product-img
+						max-width: 60px
+						img
+							max-width: 100%
+							height: auto
+					.product-info
+						margin-left: 10px
+						color: #333
+						.product-name
+							font-size: r(13px)
+							a
+								color: color-get($mau, main)
+					.remove-product
+						cursor: pointer
+						margin-left: auto
+						align-self: center
+						i
+							&:before
+								color: darken(color-get($mau, main), 10%)
+		.checkout-panel
+			.total
+				background: white
+				padding: 5px 10px
+				font-size: r(14px)
+				color: #333
+				strong
+					color: color-get($mau,main)
+			.button
+				background: color-get($mau, main)
+				padding: 10px
+				.btn-checkout
+					display: none
+				a
+					display: block
+					font-size: r(15px)
+					text-align: center
+					color: white
+					&:before
+						content: '\f07a'
+						font-family: 'Font Awesome 5 Free'
+						margin-right: 5px
+						color: white
+						font-weight: 900
+	+media-breakpoint-up(lg)
+		.cartpanel
+			right: -59px
+			top: 30px
+			&:before
+				right: 73px
+			.title
+				font-size: 1rem
+			.cart-list
+				ul
+					li
+						.product-img
+							width: 100px
+			.checkout-panel
+				.total
+					font-size: r(15px)
+.backdrop
+	+media-breakpoint-down(md)
+		position: fixed
+		width: 100%
+		height: calc(100vh - 65px)
+		top: 65px
+		left: 0
+		background: color-rgba(black, .85)
+		display: none
+		z-index: 19
+		cursor: pointer

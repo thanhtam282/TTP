@@ -1,0 +1,65 @@
+.phanam-home-3
+	figure
+		position: relative
+		overflow: hidden
+		.boxzoom
+			overflow: hidden
+			img
+				width: 100%
+				transition: .5s all ease-in-out
+		figcaption
+			z-index: 1000
+			height: r(190px)
+			position: absolute
+			bottom: r(35px)
+			display: flex
+			justify-content: flex-end
+			transition: .3s all ease-in-out
+			flex-direction: column
+			color: color-get($mau,trang)
+			text-align: left
+			// +pad(null r(100px))
+			// padding: 0 r(100px)
+			padding-left: r(100px)
+			padding-right: 2rem
+			transition: .5s all ease-in-out
+			h3
+				font-weight: 600
+				font-size: r(20px)
+				transition: .5s all ease-in-out
+			p
+				overflow: hidden
+				transition: .5s all ease-in-out
+				// visibility: hidden
+				// opacity: 0
+				height: 0
+				padding-top: 2rem
+				font-size:  r(15px)
+		+media-breakpoint-up(lg)
+			&:hover
+				.boxzoom
+					img
+						transform: scale(1.1)
+				figcaption
+					justify-content: flex-start
+					// // bottom: 0
+					p
+						height: 100%
+						// opacity: 1
+						// visibility: visible
+					// 	display: block
+		+media-breakpoint-down(md)
+			figcaption
+				+pad(null 3rem)
+				p
+					height:  100%
+		+media-breakpoint-down(sm)
+			figcaption
+				+pad(null 2rem)
+		&:after
+			position: absolute
+			display: block
+			+wh(101%)
+			content: ""
+			background-image: linear-gradient(transparent 43%,#032035 124%)
+			bottom: -1px

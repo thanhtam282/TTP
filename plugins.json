@@ -1,0 +1,31 @@
+{
+	"styles": [
+		"bower_components/font-awesome/css/all.min.css",
+		"bower_components/linearicons/dist/web-font/style.css",
+		"bower_components/mdi/css/materialdesignicons.min.css",
+		"bower_components/offline/themes/offline-theme-default.css",
+		"bower_components/slick-carousel/slick/slick-theme.css",
+		"bower_components/slick-carousel/slick/slick.css",
+		"bower_components/owl.carousel/dist/assets/owl.carousel.min.css",
+		"bower_components/owl.carousel/dist/assets/owl.theme.default.css",
+		"bower_components/lightgallery/dist/css/lightgallery.min.css",
+		"bower_components/lightgallery/dist/css/lg-transitions.min.css",
+		"bower_components/fancybox/dist/jquery.fancybox.min.css",
+		"bower_components/aos/dist/aos.css",
+		"bower_components/offline/themes/offline-language-english.css"
+	],
+	"scripts":[
+		"bower_components/jquery/dist/jquery.min.js",
+		"bower_components/bootstrap/dist/js/bootstrap.bundle.min.js",
+		"plugins/bigimg.js",
+		"plugins/mapping.js",
+		"plugins/mapping-listener.js",
+		"bower_components/offline/offline.min.js",
+		"bower_components/lightgallery/dist/js/lightgallery-all.min.js",
+		"bower_components/aos/dist/aos.js",
+		"bower_components/slick-carousel/slick/slick.min.js",
+		"bower_components/owl.carousel/dist/owl.carousel.min.js",
+		"bower_components/fancybox/dist/jquery.fancybox.min.js",
+		"bower_components/sticky-footer/dist/js/sticky-footer.js"
+	]
+}
