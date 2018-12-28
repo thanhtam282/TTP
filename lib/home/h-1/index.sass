@@ -1,135 +1,91 @@
-.phanam-home-1
-	overflow: hidden
-	// margin-bottom: 10px
-	position: relative
-	.block-wrapper
+.ttp-home-1
+	+pad(r(70px) null)
+	+media-breakpoint-down(md)
+		padding: 2rem 0 
+	.quote
+		h2
+			+head-title(text-3)
+			padding-bottom: r(36px)
+		p
+			margin: auto
+			font-size: 1rem
+			max-width: r(1030px)
+			line-height: r(24px)
+			color: color-get($mau,text-3)
+			text-align: center
+			padding-bottom: r(26px)
+	.wrapper
+		position: relative
 		display: flex
-		+media-breakpoint-down(sm)
-			flex-direction: column
-		.info-wrapper
-			position: relative
-			flex: 0 0 35%
-			color: color-get($mau,trang)
-			+pad(r(110px) r(50px) r(85px) 0)
-			+media-breakpoint-down(lg)
-				+pad(r(60px) r(50px) r(60px) 0)
-			+media-breakpoint-down(md)
-				flex: 0 0 50%
-				+pad(2rem 2rem 2rem 0)
+		justify-content: space-between
+		.block
 			+media-breakpoint-down(sm)
-				flex: 0 0 100%
-				+pad(2rem)
-			+media-breakpoint-down(xs)
-				+pad(2rem 1rem)
-			&:after
-				background: #0a558a
-				height: 100%
-				display: block
-				position: absolute
-				content: ""
-				z-index: -1
-				top: 0
-				right: 0
-				width: 100rem
-				box-shadow: 0px 0px 49px 0px rgba(0,0,0,0.29)
-				+media-breakpoint-down(sm)
-					right: -50%
-			h2
-				text-transform: uppercase
-				+fz(r(30px))
-				font-weight: 500
-				+media-breakpoint-down(sm)
-					+fz(1.4rem)
-			p
-				+fz(r(18px))
-				+pad(r(25px) null)
-				+media-breakpoint-down(sm)
-					font-size: 1rem
-			.btn-more
-				position: relative
-				font-weight: 300
-				text-transform: uppercase
-				opacity: .5
-				width: r(176px)
-				height: r(36px)
-				+fz(r(15px))
-				+flex-center()
-				color: color-get($mau,trang)
-				border: 2px solid color-get($mau,trang)
-				border-radius: r(20px)
-				overflow: hidden
-				transition: .5s all ease-in-out
-				+media-breakpoint-up(md)
-					&:hover
-						background: transparent
-						box-shadow: 0px 0px 0px 50px color-get($mau,dark) inset
-						color: color-get($mau,trang)
-
-
-		.banner-info-wrapper
-			// margin-left: 10px
-			flex: 0 0 65%
-			display: flex
-			+media-breakpoint-down(sm)
-				flex: 0 0 100%
-				position: relative
-				margin: 0
-			.banner
-				position: absolute
-				top: 0
-				width: 100%
-				height: 100%
-				z-index: -2
-				+media-breakpoint-down(sm)
-					width: 100vw
-					margin-left: calc(-50vw + 50%)
-				+media-breakpoint-up(lg)
-					display: block
-					width: calc((100vw - 960px)/2 + 620px)
-				+media-breakpoint-up(xl)
-					width: calc((100vw - 1140px)/2 + 736px)
-				@media (min-width: 1500px)
-					width: calc((100vw - 1400px)/ 2 + 910px)
-
-			.spec-info
-				+pad(r(80px) null r(80px) r(80px))
-				+media-breakpoint-down(md)
-					+pad(2rem null 2rem 2rem)
-				+media-breakpoint-down(sm)
-					+pad(2rem)
-				+media-breakpoint-down(xs)
-					+pad(2rem 1rem)
-				position: relative
-				// flex: 0 0 60%
 				display: flex
+				justify-content: space-between
 				flex-direction: column
-				height: 100%
-				justify-content: center
-				+media-breakpoint-up(lg)
-					margin-left: auto
-					justify-content: space-between
-				&:after
-					background: rgba(0,57,81,.7)
-					height: 100%
-					display: block
-					position: absolute
-					content: ""
-					z-index: -1
-					top: 0
-					left: 0
-					width: 100rem
-					+media-breakpoint-down(sm)
-						left: -50%
+			a
 				figure
-					+pad(1rem null)
 					display: flex
-					align-items: center
-					border-bottom: 1px dashed color-rgba(color-get($mau,trang),.2)
-					figcaption
-						h4
-							padding-left: 1rem
-							+fz(r(18px))
-							color: color-get($mau,trang)
-					&:last-child
-						border-bottom: 0
+					flex-direction: row-reverse
+					margin-top: 2rem
+					+media-breakpoint-down(md)
+						flex-direction: column !important
+						justify-content: center
+						align-items: center
+					.img
+						+wh(r(100px))
+						border-radius: 50%
+						border: 1px dashed color-get($mau,main)
+						+flex-center()
+						flex: 0 0 r(100px)
+						transition: .3s all ease-in-out
+						box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.29)
+						+media-breakpoint-down(md)
+							background: color-get($mau, main)
+						+media-breakpoint-down(sm)
+							padding: .75rem
+							+wh(r(75px))
+							flex: 0 0 r(75px)
 
+						img
+							transition: .3s all ease-in-out
+							+media-breakpoint-down(md)
+								filter:  brightness(0) invert(1)
+					figcaption
+						+flex-center()
+						h3
+							padding: 0 1rem 
+							font-size: r(15px)
+							color: color-get($mau,text-3)
+							+media-breakpoint-down(md)
+								margin-top: 1rem
+				&:last-child()
+					figure
+						+media-breakpoint-up(md)
+							margin-top: r(100px)
+				&:hover
+					text-decoration: none
+					+media-breakpoint-up(lg)
+						.img
+							background: color-get($mau, main)
+							img
+								filter:  brightness(0) invert(1)
+			&:nth-child(2)
+				transition: .3s all ease-in-out
+				z-index: -1
+				+media-breakpoint-down(md)
+					opacity: .6
+					position: absolute
+					left: 50%
+					transform: translateX(-50%)
+				img
+					transition: .3s all ease-in-out
+					+media-breakpoint-down(lg)
+						max-width: 400px
+					+media-breakpoint-down(sm)
+						max-width: 320px
+
+						// max-width: 300px
+			&:last-child()
+				figure
+					flex-direction: row
