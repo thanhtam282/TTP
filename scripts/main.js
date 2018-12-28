@@ -135,6 +135,16 @@ function slider_banner() {
 			//     var thumb = $(slider.$slides[i]).data('thumb');
 			//     return '<a><p> ' + thumb + '</p></a>';
 			// },
+			responsive: [{
+				breakpoint: 480,
+				settings: {
+					dots: false,
+				}
+			}
+			// You can unslick at a given breakpoint now by adding:
+			// settings: "unslick"
+			// instead of a settings object
+		]
 		});
 	}
 

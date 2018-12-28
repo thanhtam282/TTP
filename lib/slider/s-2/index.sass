@@ -1,17 +1,18 @@
 .ttp-slider-2
 	// position: absolute
 	// top: -80px
-	min-height: r(650px)
-	+media-breakpoint-down(md)
-		min-height: r(300px)
+	// min-height: r(650px)
+	// +media-breakpoint-down(sm)
+	// 	min-height: r(250px)
 	// +media-breakpoint-down(md)
 	.list-items
 		margin-bottom: 0
 		.item
 			img
+				// +media-breakpoint-up(md)
 				width: 100%
-				height: 100%
 				object-fit: cover
+				height: 100%
 			&:hover, &:active, &:focus
 				outline: none
 		
