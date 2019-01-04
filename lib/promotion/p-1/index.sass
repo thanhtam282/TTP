@@ -1,0 +1,50 @@
+.ttp-promotion-1
+	margin-top: r(100px)
+	margin-bottom: r(150px)
+	+media-breakpoint-down(sm)
+		margin-bottom: 2rem
+	h1
+		+head-title(text-3)
+		font-size: r(36px)
+		margin-bottom: r(50px)
+	.wrapper-banner
+		display: flex
+		flex-wrap: wrap
+	.col-lg-8
+		.boxzoom
+			border: 1px solid color-get($mau,main)
+		a
+			display: block
+			+media-breakpoint-down(sm)
+				margin-bottom: 1rem
+	.col-lg-4
+		display: flex
+		justify-content: space-between
+		+media-breakpoint-up(lg)
+			flex-direction: column
+		a
+			display: block
+			+media-breakpoint-down(sm)
+				margin-bottom: 1rem
+
+		.boxzoom
+			border: 1px solid #cccccc
+
+	.boxzoom
+		width: 100%
+		overflow: hidden
+		transition: .3s all ease-in-out
+		img
+			width: 100%
+			object-fit: cover
+			height: 100%
+			transition: .3s all ease-in-out
+		&:hover
+			+media-breakpoint-up(lg)
+				border: 1px solid color-get($mau,extra)
+				img
+					transform: scale(1.1)
+				
+
+	.sub
+		margin-top: r(20px)

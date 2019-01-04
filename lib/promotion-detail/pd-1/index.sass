@@ -1,0 +1,79 @@
+.ttp-promotion-detail-1
+	margin-top: r(100px)
+	margin-bottom: r(150px)
+	+media-breakpoint-down(sm)
+		margin-bottom: 2rem
+		margin-top: r(70px)
+	.news-read
+		text-align: start
+		margin-bottom: 2rem
+		.head-title
+			font-size: r(24px)
+			color: color-get($mau,text-3)
+			line-height: r(34px)
+			text-align: left
+			padding: 1rem 0
+			position: relative
+			+media-breakpoint-down(sm)
+				font-size: 1.2rem
+				line-height: 1.7rem
+			&:after
+				position: absolute
+				bottom: 0
+				display: block
+				width: 3rem
+				left: 0
+				background: color-get($mau, text-9)
+				height: 2px
+				content: ''
+		
+		time
+			color: color-get($mau,text-9)
+			font-family: "Montserrat"
+			font-size: r(14px)
+			em
+				margin-right: 5px
+				font-style: normal
+				&:before
+					margin: 3px
+		strong
+			display: block
+			padding-top: r(25px)
+			// + strong
+			// 	+pad(r(25px) null)
+		// p
+		// 	padding-top: r(25px)
+		// 	font-size: r(15px)
+		// 	color: color-get($mau,text-3)
+		figure
+			margin: 0
+			img
+				width: 100%
+				border-radius: 0
+				border: 2px solid #e1e1e1
+			figcaption
+				padding-top: 1rem
+
+
+		a
+			figure
+				img
+					margin-top: 1rem
+			&:hover
+				text-decoration: none
+		.briefcontent
+			margin-top: 1rem
+		.fullcontent
+			h3, h4
+				text-transform: uppercase
+				font-size: r(14px)
+				font-weight: 500
+			h4
+				font-style: italic
+
+			p
+				span
+					font-weight: 500
+					font-style: italic
+
+

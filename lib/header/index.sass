@@ -190,12 +190,14 @@
 					height: 68px
 					background: white
 					z-index: 10
-					transition: .3s all ease-in-out
+					transition: .5s all ease-in-out
 					+media-breakpoint-up(sm)
 						max-width: 360px
 						position: initial
 						width: 360px
 					+media-breakpoint-down(xs)
+						height: 72px
+
 						transform: translateX(-100%)
 						&.active
 							transform: translateX(0)
@@ -294,20 +296,36 @@
 				width: 100%
 				max-width: 100%
 				height: calc(100vh - 60px)
-				top: 76px
+				top: 100%
 				left: 0
 				transform: translateX(-100%)
+				transform-origin: top left
 				z-index: 20
-				//+mainGradRev
 				+media-breakpoint-down(md)
 					// background: color-get($mau, main)
 					background-image: linear-gradient(135deg,#237f50,#00984a 55%,#237f50 85%,#2ab46e)
-					transition: .5s all ease-in-out
+					transition: 1s all ease-in-out
 					display: block
 					// height: auto
 					//+tr(.4)
-					&.active
-						transform: translateX(0)
+					border-top-right-radius: 450px
+					border-top-left-radius: 450px
+				//+mainGradRev
+				+media-breakpoint-down(xs)
+					top: r(76px)
+					border-top-right-radius: 0 !important
+					border-top-left-radius: 0 !important
+					transition: .5s all ease-in-out !important
+					// right: 100%
+					
+				&.active
+					border-top-right-radius: 0
+					border-top-left-radius: 0
+					top: 76px
+					transform: translateX(0)
+					// +media-breakpoint-down(xs)
+						// top: r(76px)
+						// right: 100%
 				+media-breakpoint-up(sm)
 					max-width: 360px
 				.nav-list
@@ -336,15 +354,33 @@
 		background: color-rgba(color-get($mau,den),.8)
 		// display: none
 		height: calc(100vh - 60px)
-		top: 79px
-		width: 100%
+		top: 100%
 		position: fixed
-		right: 100%
-		transition: .4s all ease-in-out
+		border-bottom-right-radius: 450px
+		border-top-right-radius: 450px
+		transition: .5s all ease-out
 		display: block
+		right: 100%
+		transition-delay: .2s
+		+media-breakpoint-down(md)
+			width: 100%
+		+media-breakpoint-down(xs)
+			top: r(79px)
+			border-bottom-right-radius: 0
+			border-top-right-radius: 0
+			transition: 0s all ease-in-out
+			display: none
 		&.active
+			border-bottom-right-radius: 0
+			border-top-right-radius: 0
+			top: 79px
 			transition-delay: .1s
 			right: 0
+			+media-breakpoint-down(xs)
+				transition: .5s all ease-out
+				// top: r(79px)
+				transition-delay: 0 !important
+				// right: 100% !important
 		// transition: .3s all ease-in-out
 	+media-breakpoint-up(lg)
 		padding: 10px 0 0 0

@@ -1,7 +1,6 @@
 .phanam-breadcrumb-1
-	position: relative
-	background: rgba(0,106,182,.5)
-	margin-top: r(-48px)
+	position: absolute
+	width: 100%
 
 	.main-breadcrumb
 		width: 100%
@@ -15,13 +14,13 @@
 			position: relative
 			background: none
 			li
-				+fz(r(15px))
+				+fz(r(12px))
 				font-weight: 300
-				+pad(.75rem .5rem)
+				+pad(.75rem 1rem)
 				padding-right: 0
 				position: relative
 				line-height: 1.5rem
-				color: color-get($mau,trang)
+				color: color-get($mau,text-3)
 				display: flex
 				align-items: center
 				&:first-child
@@ -29,25 +28,25 @@
 					padding-right: 0
 					a
 						display: flex
-						font-size: 0
-						&:before
-							content: "home"
-							font-family: "Material Icons"
-							font-size: r(15px)
-							cursor: pointer
-						&:hover
-							text-decoration: none
+						// font-size: 0
+						// &:before
+						// 	content: "home"
+						// 	font-family: "Material Icons"
+						// 	font-size: r(15px)
+						// 	cursor: pointer
+						// &:hover
+						// 	text-decoration: none
 							
 				a
-					color: color-get($mau,trang)
+					color: color-get($mau,text-3)
 					
 
 				+ li
 					&:before
-						padding-right: .5rem
-						color: color-get($mau,trang)
-						content: "\F13E"
-						font: normal normal normal 24px/1 "Material Design Icons"
+						padding-right: 1rem
+						color: #707070
+						content: "\F054"
+						font-family: "FontAwesome"
 						line-height: 1
 						+fz(r(14px))
 						overflow: hidden

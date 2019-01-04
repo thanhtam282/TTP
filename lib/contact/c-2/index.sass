@@ -1,0 +1,52 @@
+
+.ttp-contact-2
+	margin-bottom: r(120px)
+	+media-breakpoint-down(sm)
+		margin-bottom: 3rem
+		// padding: 3rem 0
+	h2
+		font-size: r(16px)
+		text-transform: uppercase
+		color: #414042
+		position: relative
+		text-align: center
+		margin-bottom: r(35px)
+		padding-bottom: 1rem
+		font-weight: 500
+		&:after
+			position: absolute
+			bottom: 0
+			display: block
+			width: 3rem
+			left: 50%
+			transform: translateX(-50%)
+			height: 2px
+			background: color-get($mau, text-3)
+			content: ''
+
+	article
+		border-bottom: 1px solid darken(color-get($mau,trang),10%)
+		margin-bottom: 1rem
+		&:last-child
+			border-bottom: 0
+			margin-bottom: 0
+		h3
+			color: darken(color-get($mau,trang),80%)
+		.address, .tel, .hotline
+			margin-bottom: 0
+			color: darken(color-get($mau,trang),50%)
+		.hotline
+			margin-bottom: 1rem
+			span
+				color: color-get($mau,do-1)
+				+fz(1.2rem)
+		.collapse
+			margin-bottom: 1rem
+			iframe
+				width: 100%
+				min-height: 420px
+				+media-breakpoint-down(md)
+					min-height: 320px
+				+media-breakpoint-down(sm)
+					min-height: 220px
+

@@ -1,0 +1,25 @@
+.ttp-intro-1
+	padding-top: r(90px)
+	padding-bottom: r(120px)
+	+media-breakpoint-down(md)
+		padding: r(90px) 0
+	background-position: center center
+	background-size: cover
+	background-image: url('../img/intro/intro_bg_1.jpg')
+	+media-breakpoint-down(lg)
+		// background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/intro/intro_bg_1.jpg')
+		background-image: linear-gradient(to bottom, rgba(255,255,255,0.8) 0%,rgba(255,255,255,0.8) 100%), url('../img/intro/intro_bg_1.jpg')
+
+	h1
+		padding-bottom: r(90px)
+		+head-title(text-3)
+		+media-breakpoint-down(md)
+			padding-bottom: r(45px)
+	.title
+		margin-bottom: r(30px)
+		color: color-get($mau,extra)
+		font-weight: 600
+		font-size: r(24px)
+		text-transform: uppercase
+	.quote
+	

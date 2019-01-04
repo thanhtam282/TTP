@@ -1,0 +1,99 @@
+.ttp-support-cus-1
+	margin-top: r(100px)
+	margin-bottom: r(150px)
+	+media-breakpoint-down(sm)
+		margin-bottom: 2rem
+	position: relative
+	+after-img(right)
+	h2
+		color: color-get($mau,main)
+		font-weight: 600
+		font-size: r(30px)
+		margin-bottom: 1rem
+		+media-breakpoint-down(md)
+			margin-top: 2rem
+	.sub-title
+		color: color-get($mau,extra)
+		margin-left: 3rem
+		font-weight: 500
+		margin-top: 3rem
+		font-size: 1rem
+		margin-left: r(200px)
+	// p
+	// 	// padding-right: r(50px)
+	// 	width: 100%
+	// 	// flex-wrap: wrap
+	// 	display: flex
+	// 	align-items: center
+	// 	color: color-get($mau,text-3)
+	// 	font-size: r(14px)
+	// 	padding: 2rem 0
+	// 	span
+	// 		display: inline-block
+	// 		font-size: r(40px)
+	// 		font-weight: 300
+	// 		color: color-get($mau,text-9)
+	// 		width:  r(190px)
+	// 		// margin-right: 4rem
+	// 		+media-breakpoint-down(sm)
+	// 			width:  r(70px)
+	// 			font-size: 2rem
+	// 		+media-breakpoint-down(xs)
+	// 			margin-right: 1.5rem
+	table
+		tr
+			td
+				padding: 1rem 0
+				&:first-child
+					width: r(190px)
+					font-size: r(40px)
+
+					font-weight: 300
+					color: color-get($mau,text-9)
+					position: relative
+					vertical-align: top
+					+media-breakpoint-down(sm)
+						width: 100px
+						font-size: 1.5rem
+					&:after
+						position: absolute
+						top: 1rem
+						// transform: translateY(-50%)
+						display: block
+						content: ':'
+						right: 0
+				+ td
+					padding-left: 1rem
+					font-size: r(14px)
+					padding-top: 1.5rem
+					
+	.step
+		list-style: none
+		// margin-left: r(190px)
+		li
+			padding: 1rem 0
+			padding-left: 2rem
+			color: color-get($mau,text-3)
+			font-size: r(14px)
+			position: relative
+			&:after
+				color: color-get($mau,main)
+				position: absolute
+				top: 1rem
+				// transform: translateY(-50%)
+				left: 0
+				display: block
+				content: '\f056'
+				font-size: 1.2rem !important
+				font: normal normal normal 24px/1 "Material Design Icons"
+			span, strong
+				font-weight: 500
+				font-style: italic
+			span
+				display: block
+				padding-bottom: .5rem
+	p
+		+media-breakpoint-up(lg)
+			margin-left: r(200px)
+		strong
+			display: block

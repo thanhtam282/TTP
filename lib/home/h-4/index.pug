@@ -1,8 +1,17 @@
 section.ttp-home-4
 	.container
 		.row
-			.col-12
-				.wrapper
-					h2 Phát triển cùng Pha Nam
-					p Gia nhập Pha Nam, bạn sẽ được tạo điều kiện tối đa để thể hiện năng lực bản thân, đưa ra sáng kiến và biến ý tưởng thành hành động
-					a(href="#").btn.btn-more xem thêm
+			.col
+				h2 tin tức
+		.row
+			- for ( var x = 0 ; x < 6; x++ )
+				.col-lg-4.col-md-6
+					.wrapper
+						a(href="#")
+							figure
+								.boxzoom
+									img(src='./img/home/home_news_1.png', alt='')
+								figcaption
+									time 19.11.2018
+									h3 Dưỡng sáng da đều màu với tinh dầu hạnh nhân
+

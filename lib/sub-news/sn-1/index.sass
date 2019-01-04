@@ -1,0 +1,84 @@
+
+.othernews
+	// // +bor-rad(5px)
+	// overflow: hidden
+	// width: 100%
+	h2
+		font-size: r(24px)
+		color: color-get($mau,text-3)
+		text-transform: uppercase
+		padding-bottom: 1rem
+		position: relative
+		&:after
+			position: absolute
+			bottom: 0
+			display: block
+			width: 3rem
+			height: 2px
+			content: ''
+			background: color-get($mau, text-9)
+			left: 0
+
+	.lists
+		+pad(1rem 0 1rem 0)
+		+media-breakpoint-down(sm)
+			+pad(1rem 0)
+		.item
+			figure
+				+pad(.5rem null)
+				display: flex
+				+media-breakpoint-down(sm)
+					border: 0
+					// flex-direction: column
+				.img
+					flex: 0 0 35%
+					overflow: hidden
+					// height: r(120px)
+					+media-breakpoint-down(md)
+						height: 10rem
+					+media-breakpoint-down(sm)
+						height: auto
+						// flex: 0 0 100%
+					img
+						object-fit: cover
+						+wh(100%)
+						transition: .3s all ease-in-out
+				figcaption
+					position: relative
+					padding-left: 1rem
+					h3
+						+fz(r(14px))
+						text-transform: uppercase
+						color: color-get($mau,text-6)
+						transition: .3s all ease-in-out
+						+line(3)
+						margin-top: 5px
+						line-height: r(19px)
+						+media-breakpoint-down(sm)
+							+fz(r(14px))
+					time
+						+fw(300)
+						color: darken(color-get($mau,trang) ,30%)
+						+fz(r(14px))
+						em
+							font-style: normal
+							margin-right: 5px
+							// position: absolute
+							// bottom: 0
+							// +media-breakpoint-up(md)
+								// bottom: 1.5rem
+							// &:before
+								// margin: 3px
+			&:hover
+				text-decoration: none
+				+media-breakpoint-up(md)
+					figure
+						.img
+							img
+								transform: scale(1.1)
+						figcaption
+							h3
+								color: color-get($mau,dark)
+			&:last-child()
+				figure
+					border: 0

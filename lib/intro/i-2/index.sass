@@ -1,0 +1,38 @@
+.ttp-intro-2
+	padding: r(70px) 0
+	background-position: center center
+	background-size: cover
+	background-image:  url('../img/intro/intro_bg_2.png')
+	.col-md-4
+		+flex-center()
+		
+	.quote
+		padding-left: 2rem
+		+media-breakpoint-up(lg)
+			flex-direction: column
+		height: 100%
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		+media-breakpoint-down(md)
+			margin: 0 -1rem
+			margin-top: 2rem
+		+media-breakpoint-down(sm)
+			padding: 0
+		.title
+
+			margin-bottom: r(30px)
+			color: color-get($mau,extra)
+			font-weight: 600
+			font-size: r(24px)
+			text-transform: uppercase
+			&:nth-child(2)
+				margin-top: 2rem
+		+media-breakpoint-down(sm)
+			.sub
+				padding: 0 1rem
+				flex: 0 0 50%
+		+media-breakpoint-down(xs)
+			.sub
+				padding: 0 1rem
+				flex: 0 0 100%

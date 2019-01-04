@@ -1,0 +1,86 @@
+.ttp-media-2
+	margin-bottom: r(100px)
+	+media-breakpoint-down(md)
+		margin-bottom: r(50px)
+	a
+		&:hover
+			text-decoration: none
+			img
+				+media-breakpoint-up(lg)
+					transform: scale(1.1)
+		figure
+			position: relative
+			.boxzoom
+				overflow: hidden
+				img
+					transition: .3s all ease-in-out
+					max-width: 100%
+			figcaption
+				h3
+					font-size: 1rem
+					color: color-get($mau,text-3)
+					text-transform: uppercase
+				time
+					font-weight: 400
+					color: color-get($mau,text-3)
+					+wh(r(45px))
+					+flex-center()
+					flex-direction: column
+					position: absolute
+					top: .5rem
+					padding: 3px
+					background: color-rgba(color-get($mau,trang),.7)
+					left: .5rem
+					span
+						border-top: 1px solid color-get($mau,text-9)
+						display: block
+	.big
+		height: 100%
+		figure
+			position: relative
+			height: 100%
+			&:after
+				position: absolute
+				bottom: 0
+				display: block
+				width: 100%
+				height: 100%
+				content: ''
+				background-image: linear-gradient(transparent 72%, black 95%)
+			.boxzoom
+				height: 100%
+				img
+					height: 100%
+					object-fit: cover
+
+			figcaption
+				height: 100%
+				z-index: 999
+				height: 100%
+				position: absolute
+				bottom: 0
+				width: 100%
+				h3
+					color: color-get($mau,trang)
+					position: absolute
+					bottom: .5rem
+					width: 100%
+					text-align: center
+				time
+					+wh(60px)
+	.small
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		
+		figure
+			+media-breakpoint-down(md)
+				margin-top: r(30px)
+			figcaption
+				h3
+					font-size: r(15px)
+					margin-top: .5rem
+					+media-breakpoint-down(sm)
+						text-align: center
+

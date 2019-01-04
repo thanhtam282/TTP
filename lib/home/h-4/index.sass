@@ -1,48 +1,57 @@
 .ttp-home-4
-	background: #6ab0de
-	+pad(r(120px) null)
-	+media-breakpoint-down(md)
-		+pad(r(60px) null)
-	+media-breakpoint-down(sm)
-		+pad(2.875rem null)
+	background-position: center center
+	background-size: cover
+	background-image: url('../img/home/home_bg_2.png')
+	padding-bottom: r(150px)
+	// +media-breakpoint-down(md)
+	// 	padding-bottom: r(70px)
+	+media-breakpoint-down(xs)
+		padding-bottom: r(35px)
+	h2
+		+head-title(text-3)
+		// margin-bottom: r(25px)
 
 	.wrapper
-		+flex-center()
-		flex-direction: column
-		h2
-			+head-title(dark)
-			margin-bottom: .5rem
-			color: #006ab6
-		p
-			color: color-get($mau,trang)
-			+fz(r(18px))
-			max-width: r(750px)
-			+media-breakpoint-down(sm)
-				font-size: 1rem
-				padding-top: 1rem
-		.btn-more
-			position: relative
-			font-weight: 300
-			text-transform: uppercase
-			// opacity: .5
-			margin-top: r(40px)
-			width: r(176px)
-			height: r(36px)
-			+fz(r(15px))
-			+flex-center()
-			color: #ffff
-			border: 2px solid #9fccec
-			border-radius: r(20px)
-			overflow: hidden
-			background: #85bee5
-			transition: .5s all ease-in-out
-			+media-breakpoint-up(md)
-				&:hover
-					background: transparent
-					box-shadow: 0px 0px 0px 50px color-get($mau,dark) inset
-					color: #fff
-			+media-breakpoint-down(sm)
-				background: transparent
-				box-shadow: 0px 0px 0px 50px color-get($mau,dark) inset
-				color: #6da5cd
-				opacity: 1
+		a
+			figure
+				display: flex
+				flex-wrap: wrap
+				box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.29)
+				margin-top: r(30px)
+
+				.boxzoom
+					overflow: hidden
+					flex: 0 0 35%
+					// +media-breakpoint-down(xs)
+					// 	flex: 0 0 100%
+					img
+						height: 100%
+						object-fit: cover
+						width: 100%
+						transition: .3s all ease-in-out
+				figcaption
+					flex: 0 0 65%
+					padding: r(20px) r(25px) r(20px) r(25px) 
+					background: color-get($mau, trang)
+					+media-breakpoint-down(xs)
+						padding: 1rem
+					// 	flex: 0 0 100%
+
+					time
+						display: block
+						font-size: r(14px)
+						color: color-get($mau,text-9)
+						margin-bottom: .5rem
+					h3
+						color: color-get($mau,text-3)
+						font-size: r(14px)
+						font-weight: 500
+						line-height: r(20px)
+						height: r(60px)
+						+line(3)
+			&:hover
+				text-decoration: none
+				+media-breakpoint-up(lg)
+					img
+						transform: scale(1.1)
+

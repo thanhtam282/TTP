@@ -1,6 +1,6 @@
 
 .ttp-slider-1
-	display: none 
+	// display: none 
 	// position: absolute
 	// top: -80px
 	box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.29)
@@ -20,7 +20,8 @@
 				outline: none
 		
 		.slick-prev 
-			z-index: 999
+			z-index: 5
+			left: -1rem
 			&:before
 				content: "\e875"
 				font-family: "Linearicons-Free"
@@ -30,12 +31,17 @@
 				font-size: r(30px)
 				transform: translateY(-50%)
 				color: color-get($mau,text-9)
+				+media-breakpoint-down(xs)
+					left: 1rem
 
 		.slick-next
-			z-index: 999
+			z-index: 5
+			right: -1rem
 			&:before
 				font-size: r(30px)
 				right: 2rem
+				+media-breakpoint-down(xs)
+					right: 1rem
 				color: color-get($mau,text-9)
 				position: absolute
 				top: 50%

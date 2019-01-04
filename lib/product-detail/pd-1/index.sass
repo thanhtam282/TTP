@@ -1,0 +1,277 @@
+.ttp-product-detail-1
+	.product-details
+		padding: 2rem 0
+		+media-breakpoint-down(sm)
+			padding-top: 0
+		+media-breakpoint-up(md)
+			padding: 2rem 0
+			.order-md-1
+				-ms-flex-order: 1
+				order: 1
+			.order-md-2
+				-ms-flex-order: 2
+				order: 2
+		.infomation
+			padding-top: 2rem
+			h2
+				color: color-get($mau,main)
+				font-size: r(24px)
+				text-transform: uppercase
+				font-weight: 600
+
+			p
+				padding: .5rem 0 1rem 0
+				color: color-get($mau,text-9)
+				font-size: r(13px)
+				span
+					font-weight: 500
+
+					&:first-child
+						padding-right: 1rem
+						position: relative
+						+media-breakpoint-down(sm)
+							display: block
+						&:after
+							position: absolute
+							top: 0
+							right: .5rem
+							display: block
+							width: 1px
+							height: 100%
+							content: ''
+							background: color-get($mau, text-9)
+							+media-breakpoint-down(sm)
+								display: none
+						// border-right: 1px solid color-get($mau,text-9)
+					// &:last-child
+						// margin-left: 1rem
+			.table
+				position: relative
+				&:after
+					position: absolute
+					top: 0
+					left: 0
+					display: block
+					width: 3rem
+					height: 1px
+					content: ''
+					background: color-get($mau, extra)
+				td, th
+					&:first-child
+						padding-left: 0
+						white-space: nowrap
+				tr
+					th
+						white-space: nowrap
+						font-size: r(14px)
+						color: color-get($mau,text-3)
+						&:last-child
+							color: color-get($mau,extra)
+							font-size: r(18px)
+							font-weight: 500
+							span
+								font-weight: 300
+								color: #c2c2c2
+								margin-left: r(20px)
+								text-decoration: line-through
+				tr
+					height: r(63px)
+					td
+						font-size: r(14px)
+						color: color-get($mau,text-3)
+						&:last-child
+							color: color-get($mau,text-6)
+					&:nth-child(3)
+						td
+							&:last-child
+								font-size: r(16px)
+				.quantity
+					.form-group
+						width: r(150px)
+						+media-breakpoint-down(xs)
+							width: 9rem
+						.btn-default
+							font-size: 1.5rem
+							padding: 0
+							border: 1px solid #c2c2c2 !important
+							+wh(r(40px))
+							+flex-center()
+							color: color-get($mau,text-3)
+							display: inline-flex
+							transition: .3s all ease-in-out
+							&:hover, &:active, &:focus
+								text-decoration: none
+								color: color-get($mau,main)
+						input
+							height: r(40px)
+							text-align: center
+						// span
+						// 	border-top:  1px solid #c2c2c2
+						// 	border-bottom:  1px solid #c2c2c2
+						// 	+flex-center()
+						// 	display: inline-flex
+						// 	width: r(70px)
+						// 	height: r(40px)
+						// 	font-size: 1rem
+
+			.btn-buy
+				padding: r(9px) r(14px)
+				text-transform: uppercase
+				color: color-get($mau,trang)
+				font-size: 1rem
+				background: color-get($mau, main)
+				border-radius: 0
+				transition: .3s all ease-in-out
+				&:hover
+					+media-breakpoint-up(lg)
+						background: color-get($mau, trang)
+						// border: 2px solid color-get($mau,main)
+						box-shadow: 0px 0px 0px 2px color-get($mau,main) inset
+						color: color-get($mau,main)
+
+
+		.slider-img
+			+clearfix
+			+flex-center()
+			flex-direction: row-reverse
+			+media-breakpoint-down(lg)
+				display: block
+			.slider-control
+				margin-top: 2rem
+				text-align: center
+				position: relative
+				+media-breakpoint-down(sm)
+					margin-top: 0
+				+media-breakpoint-up(lg)
+					margin-top: 0
+					padding-top: 3rem
+					float: left
+					width: 80px
+				.slick-track
+					margin-bottom: 1rem
+					+media-breakpoint-up(lg)
+						flex-direction: column
+						margin-bottom: 1rem
+						width: initial !important
+						cursor: pointer
+						float: none
+					.slick-slide
+						text-align: center !important
+						cursor: pointer
+						+media-breakpoint-up(lg)
+							margin-bottom: 1rem
+						&:focus
+							outline: none
+						img
+							border-radius: 0 !important
+							display: inline-block
+							+bor-rad(5px)
+							max-width: 100%
+							transition: .3s all ease-in-out
+							border: 1px solid #d7d7d7
+						&.slick-current, &:hover
+							img
+								border: 1px solid color-get($mau,main)
+				.top-arrow, .bottom-arrow
+					// background: darken(color-get($mau,trang),5%)
+					color: color-get($mau,text-9)
+					margin: .5rem
+					height: 3rem
+					width: 3rem
+					border: 0 !important
+					// +bor-rad(50%)
+					+media-breakpoint-up(lg)
+						margin: 0
+						width: 100%
+						// +bor-rad(5px)
+						height: initial
+						i
+							+transform(rotate(90deg))
+					+media-breakpoint-down(sm)
+						margin: 0
+					&:hover, &:active, &:focus
+						// background: color-get($mau,main)
+						color: color-get($mau,main)
+						outline: none
+						box-shadow: none
+
+				.top-arrow
+					+media-breakpoint-up(lg)
+						+pos(abs, 0 0 null null)
+
+
+			.slider-for
+				+media-breakpoint-up(lg)
+					+flex-center()
+					height: 100%
+				.item
+					text-align: center
+					figure
+						height: 100%
+						+pad(1rem)
+						// padding-top: 2rem
+						+flex-center()
+						+media-breakpoint-up(lg)
+							padding-right: 0
+							padding-top: 0
+						// +media-breakpoint-down(sm)
+						
+							
+						.img
+							+flex-center()
+							height: r(500px)
+							width: 100%
+							padding: 1rem
+							// margin-top: 2rem
+							+media-breakpoint-up(lg)
+								padding-right: 0
+								padding-top: 0
+
+							// border-radius: 4px
+							background: color-get($mau, trang)
+							// box-shadow: 0px 0px 8px 0px rgba(162, 100, 34, 0.3)
+							overflow: hidden
+							+media-breakpoint-down(lg)
+								height: r(300px)
+							img
+								max-height: 100%
+								max-width: 100%
+								// object-fit: contain
+								text-align: center
+								display: inline-block
+						&:hover, &:active, &:focus
+							outline: none !important
+				+media-breakpoint-up(lg)
+					float: right
+					width: calc(100% - 80px)
+			.slider-nav
+				.img
+					width: 100%
+					height: r(79px)
+					display: flex
+					justify-content: center
+					overflow: hidden
+					img
+						// +wh(100%)
+						max-height: 100%
+
+						// object-fit: contain
+
+	+media-breakpoint-up(lg)
+		.slick-list
+			height: 100%
+			.slick-track
+				height: 100%
+
+.lg-backdrop
+	background: color-rgba(color-get($mau,den),.3)
+.lg
+	.lg-inner
+		.lg-item
+			+flex-center()
+
+			.lg-img-wrap
+				width: 50%
+				height: 50%
+				margin: auto
+				background: color-get($mau, trang)

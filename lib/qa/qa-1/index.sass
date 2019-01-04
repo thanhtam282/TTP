@@ -1,0 +1,75 @@
+.ttp-qa-1
+	padding: r(100px) 0
+
+	.quote
+		+media-breakpoint-down(md)
+			margin-top: 2rem
+		margin-bottom: 1rem
+		.title-main
+			color: color-get($mau,main)
+			font-weight: 600
+			font-size: r(30px)
+			margin-bottom: 1rem
+		p	
+			font-style: italic
+			color: color-get($mau,text-3)
+	.block
+		border-bottom: 1px dashed color-get($mau,text-9)
+		.question
+			cursor: pointer
+			border-top: 1px dashed color-get($mau,text-9)
+			position: relative
+			// border-top: 1px dashed color-get($mau,text-9)
+			display: flex
+			// justify-content: center
+			align-items: center
+			padding: r(20px) 0
+			&:first-child
+				border-top: 0
+			&.active
+				border-bottom: 0
+				&:after
+					content: '\f056'
+
+			&:after
+				cursor: pointer
+				position: absolute
+				top: 50%
+				transform: translateY(-50%)
+				right: 1rem
+				display: block
+				font-size: r(24px)
+				// width: r(20px)
+				// height: r(20px)
+				content: '\f055'
+				font-family: "FontAwesome"
+				color: color-get($mau,main)
+			h3
+				padding-right: r(50px)
+				width: 100%
+				// flex-wrap: wrap
+				display: flex
+				align-items: center
+				color: color-get($mau,text-3)
+				font-size: r(14px)
+				span
+					display: inline-block
+					font-size: r(40px)
+					font-weight: 300
+					color: color-get($mau,text-9)
+					width:  r(116px)
+					+media-breakpoint-down(sm)
+						width:  r(70px)
+						font-size: 2rem
+					+media-breakpoint-down(xs)
+						margin-right: 1.5rem
+
+					// margin-right: r(70px)
+		.answer
+			font-size: r(14px)
+			padding-bottom: r(20px)
+			padding-right: r(50px)
+			padding-left: r(71px)
+			+media-breakpoint-up(md)
+				padding-left: r(116px)
+			// border-bottom: 1px dashed color-get($mau,text-9)

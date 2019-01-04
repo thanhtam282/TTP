@@ -35,6 +35,7 @@
     "sticky-footer": "https://github.com/cferdinandi/sticky-footer.git#^4.2.0",
     "slick-carousel": "^1.8.1",
     "lightgallery": "^1.6.11",
-    "aos": "^2.3.4"
+    "aos": "^2.3.4",
+    "bootstrap-touchspin": "^4.2.5"
   }
 }
