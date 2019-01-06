@@ -1,6 +1,6 @@
 .ttp-qa-1
 	padding: r(100px) 0
-
+	counter-reset: h3
 	.quote
 		+media-breakpoint-down(md)
 			margin-top: 2rem
@@ -52,17 +52,22 @@
 				align-items: center
 				color: color-get($mau,text-3)
 				font-size: r(14px)
-				span
-					display: inline-block
+				&:before
+					counter-increment: h3
+					content: counters(h3, ".", decimal-leading-zero)
 					font-size: r(40px)
-					font-weight: 300
 					color: color-get($mau,text-9)
+					font-weight: 300
 					width:  r(116px)
+					display: block
 					+media-breakpoint-down(sm)
 						width:  r(70px)
 						font-size: 2rem
 					+media-breakpoint-down(xs)
 						margin-right: 1.5rem
+				span
+					display: none
+
 
 					// margin-right: r(70px)
 		.answer

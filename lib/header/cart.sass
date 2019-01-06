@@ -10,8 +10,8 @@
 		transition: all .3s ease-in-out
 		+media-breakpoint-up(sm)
 			width: 360px
-		// +media-breakpoint-down(xs)
-		// 	max-width: 100%
+		+media-breakpoint-down(xs)
+			max-width: 100%
 		&.open
 			display: block
 		&:before
@@ -117,14 +117,14 @@
 			.checkout-panel
 				.total
 					font-size: r(15px)
-.backdrop
-	+media-breakpoint-down(md)
-		position: fixed
-		width: 100%
-		height: calc(100vh - 65px)
-		top: 65px
-		left: 0
-		background: color-rgba(black, .85)
-		display: none
-		z-index: 19
-		cursor: pointer
+// .backdrop
+// 	+media-breakpoint-down(md)
+// 		position: fixed
+// 		width: 100%
+// 		height: calc(100vh - 65px)
+// 		top: 65px
+// 		left: 0
+// 		background: color-rgba(black, .85)
+// 		display: none
+// 		z-index: 19
+// 		cursor: pointer

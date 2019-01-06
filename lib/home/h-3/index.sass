@@ -1,7 +1,7 @@
 .ttp-home-3
-	background-position: center center
-	background-size: cover
-	background-image: url('../img/home/home_bg_2.png')
+	// background-position: center center
+	// background-size: cover
+	// background-image: url('../img/home/home_bg_2.png')
 	padding: r(65px) 0
 	+media-breakpoint-down(md)
 		padding: r(25px) 0
@@ -43,7 +43,7 @@
 					overflow: hidden
 					+flex-center()
 					img
-						width: 100%
+						// width: 100%
 				&:after
 					position: absolute
 					top: -100%
@@ -82,8 +82,9 @@
 						color: color-get($mau,main)
 						font-weight: 500
 						text-align: left
+						display: flex
 						span
-							padding-left: r(20px)
+							margin-left: auto
 							color: color-get($mau,text-9)
 							font-size: r(14px)
 							text-decoration: line-through
@@ -118,7 +119,10 @@
 							display: block
 							width: 100%
 							margin-bottom: 1rem
-							.btn
+							.fa
+								+flex-center()
+								margin: 0 auto
+							.btn , .fa
 								padding: 0 .5rem
 								font-size: r(14px)
 								width: 80%
@@ -129,29 +133,37 @@
 								transition: height 1s ease-in-out , padding 1s  ,  .3s background  ease-in-out ,  .3s color ease-in-out 
 								// transition: .3s color 
 								overflow: hidden
+
 								span
 									margin-right: 5px
+									font-size: r(14px)
+									+media-breakpoint-down(sm)
+										height: 100%
+										+flex-center()
 								&:hover
 									background: color-get($mau, extra)
 									color: color-get($mau,trang)
 							&:last-child()
 								margin-bottom: 0
+							+media-breakpoint-down(sm)
+								&:first-child
+									.btn
+										font-size: 0
 
 
 				&:hover
 					text-decoration: none
-					+media-breakpoint-up(lg)
-						&:after
-							top: -50%
-						&:before
-							bottom: -50%
-						figcaption
-							.buy-block
-								height: 100%
-								transition-delay: .4s
-								z-index: 999
-								.btn
-									padding: .5rem
-									height: r(40px)
+					&:after
+						top: -50%
+					&:before
+						bottom: -50%
+					figcaption
+						.buy-block
+							height: 100%
+							transition-delay: .4s
+							z-index: 999
+							.btn, .fa
+								padding: .5rem
+								height: r(40px)
 
 

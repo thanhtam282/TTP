@@ -105,6 +105,35 @@
 		.user
 		.menu-wrap
 			position: relative
+			.cart
+				+media-breakpoint-up(sm)
+					position: relative
+				.cart-toggle
+					position: absolute
+					top: 19.5px
+					right: 40px
+					width: 20px
+					.icon
+						position: relative
+						cursor: pointer
+						span
+							line-height: 20px
+							width: 30px
+							font-size: 18px
+							color: lighten(black,60%)
+							&.amount
+								position: absolute
+								top: -8px
+								width: 16px
+								height: 16px
+								background: color-get($mau, main)
+								border-radius: 50%
+								color: white
+								display: flex
+								justify-content: center
+								line-height: 16px
+								font-size: 12px
+								right: -9px
 			.hot-line
 				+pad(null 12px)
 				position: relative

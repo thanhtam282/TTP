@@ -393,7 +393,8 @@ $(document).ready(function () {
 	toggleMainNav();
 	toggleSearch();
 	toggleLang();
-
+	toggleCart()
+	closeCart()
 	slider_banner_sub()
 	slider_banner()
 	slider_footer()

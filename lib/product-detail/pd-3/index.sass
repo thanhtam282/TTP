@@ -75,10 +75,11 @@
 					color: color-get($mau,main)
 					font-weight: 500
 					text-align: left
+					display: flex
 					+media-breakpoint-down(sm)
 						text-align: center
 					span
-						padding-left: r(20px)
+						margin-left: auto
 						color: color-get($mau,text-9)
 						font-size: r(14px)
 						text-decoration: line-through
@@ -113,7 +114,10 @@
 						display: block
 						width: 100%
 						margin-bottom: 1rem
-						.btn
+						.fa
+							+flex-center()
+							margin: 0 auto
+						.btn , .fa
 							padding: 0 
 							font-size: r(14px)
 							width: 80%
@@ -131,23 +135,26 @@
 								color: color-get($mau,trang)
 						&:last-child()
 							margin-bottom: 0
+						+media-breakpoint-down(sm)
+							&:first-child
+								.btn
+									font-size: 0
 
 
 			&:hover
 				text-decoration: none
-				+media-breakpoint-up(lg)
-					&:after
-						top: -50%
-					&:before
-						bottom: -50%
-					figcaption
-						.buy-block
-							height: 100%
-							transition-delay: .4s
-							z-index: 999
-							.btn
-								padding: .5rem 0
-								height: r(40px)
+				&:after
+					top: -50%
+				&:before
+					bottom: -50%
+				figcaption
+					.buy-block
+						height: 100%
+						transition-delay: .4s
+						z-index: 999
+						.btn, .fa
+							padding: .5rem
+							height: r(40px)
 
 	.owl-nav
 		margin: 0
