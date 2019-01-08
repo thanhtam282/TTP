@@ -1,0 +1,159 @@
+section.checkout
+	.container.checkout-cart
+		.row.cart-title
+			.col
+				h3
+					span.fas.fa-shopping-cart
+					span Giỏ hàng của bạn (
+					span 2 
+					span sản phẩm)
+		.row.cart-table-list
+			.col
+				table
+					thead
+						tr
+							th Sản phẩm
+							th Đơn giá
+							th Số lượng
+							th Thành tiền
+					tbody
+						tr
+							td
+								figure
+									img(src="./img/product/4.png", alt="")
+									figcaption
+										h4 Router Linksys
+										p EA6100-EJ
+							td 551.000 đ
+							td
+								.quantity
+									span.minus -
+									input.quantity-number(type="text" value="1")
+									span.plus +
+							td 551.000 đ
+						tr
+							td
+								figure
+									img(src="./img/product/6.png", alt="")
+									figcaption
+										h4 Router Linksys
+										p EA6100-EJ
+							td 551.000 đ
+							td
+								.quantity
+									span.minus -
+									input.quantity-number(type="text" value="1")
+									span.plus +
+							td 551.000 đ
+		.row.cart-total-price
+			.col
+				p
+					span Tạm tính: 
+					span.price-temp 2.101.000 đ
+				p
+					span Phí vận chuyển:
+					span.price-shipping 0 đ
+				p Giá chưa bao gồm VAT
+		.cart-button-checkout
+			a.btn.btn-prev(href="#")
+				span.mdi.mdi-chevron-left
+				span Tiếp tục mua hàng
+			a.btn.btn-next(href="#")
+				span Tiến hành thanh toán
+				span.mdi.mdi-chevron-right
+	.container.viewed-product
+		.row.cart-title
+			.col
+				h3
+					span.far.fa-clock
+					span Giỏ hàng của bạn 
+		.swiper-container
+			.swiper-button-prev
+				span.lnr.lnr-chevron-left
+			.swiper-button-next
+				span.lnr.lnr-chevron-right
+			.swiper-wrapper
+				.swiper-slide
+					.product
+						figure
+							.boxzoom
+								img.img-fluid(src='./img/home/home_product_2.png', alt='')
+								
+							figcaption
+								h3 Tinh dầu Vỏ quế
+								p.price 195.000đ
+									span.discount 150.000đ
+								p.new - 20%
+								.buy-block
+									a(href="#")
+
+										.btn.btn-put 
+											span.fas.fa-shopping-cart
+											| Cho vào giỏ hàng
+									a(href="#")
+										.btn.btn-more Xem thêm
+				.swiper-slide
+					.product
+						figure
+							.boxzoom
+								img.img-fluid(src='./img/home/home_product_2.png', alt='')
+								
+							figcaption
+								h3 Tinh dầu Vỏ quế
+								p.price 195.000đ
+									span.discount 150.000đ
+								p.new - 20%
+								.buy-block
+									a(href="#")
+
+										.btn.btn-put 
+											span.fas.fa-shopping-cart
+											| Cho vào giỏ hàng
+									a(href="#")
+										.btn.btn-more Xem thêm
+		
+				.swiper-slide
+					.product
+						figure
+							.boxzoom
+								img.img-fluid(src='./img/home/home_product_2.png', alt='')
+								
+							figcaption
+								h3 Tinh dầu Vỏ quế
+								p.price 195.000đ
+									span.discount 150.000đ
+								p.new - 20%
+								.buy-block
+									a(href="#")
+
+										.btn.btn-put 
+											span.fas.fa-shopping-cart
+											| Cho vào giỏ hàng
+									a(href="#")
+										.btn.btn-more Xem thêm
+		
+				//- .swiper-slide
+				//- 	.tna-product-item
+				//- 		figure
+				//- 			.boxzoom
+				//- 				a.detail(href="")
+				//- 					img(src="./img/product/1.png", alt="alt")
+				//- 			figcaption
+				//- 				h4
+				//- 					a(href="#") Camera VANTECH
+				//- 				.code VP-314TVI
+				//- 				.price 633.000 đ
+				//- 				a.addcart(href="#") Thêm vào giỏ hàng
+		
+				//- .swiper-slide
+				//- 	.tna-product-item
+				//- 		figure
+				//- 			.boxzoom
+				//- 				a.detail(href="")
+				//- 					img(src="./img/product/1.png", alt="alt")
+				//- 			figcaption
+				//- 				h4
+				//- 					a(href="#") Camera VANTECH
+				//- 				.code VP-314TVI
+				//- 				.price 633.000 đ
+				//- 				a.addcart(href="#") Thêm vào giỏ hàng

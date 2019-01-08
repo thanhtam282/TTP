@@ -1,0 +1,64 @@
+.ttp-media-photo-1, .ttp-media-photo-2
+	margin-bottom: r(100px)
+	+media-breakpoint-down(md)
+		margin-bottom: r(50px)
+
+
+	// position: relative
+	// background: color-rgba(color-get($mau,den),.5)
+
+	.box-zoom
+		// height: r(185px)
+		overflow: hidden
+		// margin-bottom: r(30px)
+		+media-breakpoint-down(sm)
+			height: auto
+		a
+			position: relative
+			img
+				transition: .3s all ease-in-out
+				+wh(100%)
+				object-fit: cover
+			display: none
+			&:first-child()
+				display: block
+			&:after
+				content: '\f302'
+				font-family: 'Font Awesome 5 Free'
+				+fz(2.2rem)
+				display: flex
+				justify-content: center
+				align-items: center
+				color: color-get($mau,trang)
+				width: 100%
+				height: 100%
+				+transition(all .4s ease-in-out)
+				+pos(abs,null null 0 0)
+				background: color-rgba(color-get($mau,den),.5)
+
+		+media-breakpoint-up(md)
+			&:hover
+				img
+					transform: scale(1.1)
+	.hidden
+		display: none
+	.small
+		height: 100%
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+
+		.box-zoom
+			+media-breakpoint-down(md)
+				margin-top: r(30px)
+			// img
+			// 	height: r(140px)
+	.ajaxwrapper
+		.box-zoom
+			margin-top: r(30px)
+.ttp-media-photo-1
+	margin-bottom: 0
+	a
+		height: 100%
+		.box-zoom
+			height: 100%

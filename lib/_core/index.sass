@@ -26,8 +26,30 @@
 		color: #fff
 		font-size: r(14px)
 .news-detail-page
-	.newsdetailpager
+	.newsdetailpager, .Module-249, .Module-247
 		display: none
+.promotion-ttp
+	.newspager
+		display: none
+
+
+.product-detail-page
+	.Module-261
+		display: none
+	+media-breakpoint-up(md)
+		.lg-backdrop
+			background: color-rgba(color-get($mau,den),.3)
+		.lg
+			.lg-inner
+				.lg-item
+					+flex-center()
+
+					.lg-img-wrap
+						width: 50%
+						height: 50%
+						margin: auto
+						background: color-get($mau, trang)
+
 
 .edit-link
 	i
@@ -108,13 +130,47 @@ html, body
 		position: absolute
 		top: -28%
 		z-index: 8
-		$side: 0
+		left: 0
 		display: block
 		// width: 100%
 		// height: 100%
 		content: url('../img/home/home_small_2.png')
 		+media-breakpoint-down(lg)
-			$side: -3%
+			left: -3%
+			top: -25%
+			transform: scale(.8)
+		+media-breakpoint-down(md)
+			display: none
+=after-right($img)
+	position: relative
+	&:after
+		position: absolute
+		top: -28%
+		z-index: 8
+		right: 0
+		display: block
+		// width: 100%
+		// height: 100%
+		content: url('../img/home/'+$img+'.png')
+		+media-breakpoint-down(lg)
+			right: -3%
+			top: -25%
+			transform: scale(.8)
+		+media-breakpoint-down(md)
+			display: none
+=after-left($img)
+	position: relative
+	&:after
+		position: absolute
+		top: -28%
+		z-index: 8
+		left: 0
+		display: block
+		// width: 100%
+		// height: 100%
+		content: url('../img/home/'+$img+'.png')
+		+media-breakpoint-down(lg)
+			left: -3%
 			top: -25%
 			transform: scale(.8)
 		+media-breakpoint-down(md)

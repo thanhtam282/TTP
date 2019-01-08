@@ -1,6 +1,11 @@
 .ttp-qa-1
 	padding: r(100px) 0
 	counter-reset: h3
+	position: relative
+	+after-img(right)
+	&:after
+		top: -10% !important
+
 	.quote
 		+media-breakpoint-down(md)
 			margin-top: 2rem

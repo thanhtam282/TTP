@@ -1,0 +1,169 @@
+section.checkout
+	.container.checkout-address-edit
+		.row
+			.col-lg-8
+				.cart-title
+					h3
+						span.fas.fa-map-marker-alt
+						span Địa chỉ nhận hàng
+				.cart-address
+					.address-edit
+						.form-group.form-name
+							label(for="name") Họ tên
+							input(name="name" type="text" placeholder="Ví dụ: Nguyễn Văn C")
+						.form-group.form-phone
+							label(for="name") Số điện thoại
+							input(name="name" type="text" placeholder="Ví dụ: Nguyễn Văn C")
+							span (Nhân viên giao nhận sẽ liên hệ với SĐT này)
+						.form-group.form-email
+							label(for="name") Email
+							input(name="name" type="text" placeholder="Ví dụ: Nguyễn Văn C")
+						hr
+						.form-group.form-city
+							label Tỉnh/Thành phố
+							select(name="")
+								option -- chọn Tỉnh/Thành phố
+								option TP. Hồ Chí Minh
+								option Hà Nội
+								option Đăk Nông
+						.form-group.form-distric
+							label Quận/Huyện
+							select(name="")
+								option -- chọn Quận/Huyện
+								option TP. Hồ Chí Minh
+								option Hà Nội
+								option Đăk Nông
+						.form-group.form-address
+							label(for="name") Địa chỉ
+							input(name="name" type="text" placeholder="Ví dụ: Nguyễn Văn C")
+							
+						.form-group.form-message
+							label(for="name") Lời nhắn
+								span (Không bắt buộc)
+							textarea(name="name" type="text" placeholder="Ví dụ: Nguyễn Văn C")
+						.check-group
+							input#ttmh(type="checkbox" name="Address_SameBilling" checked="checked")
+							label#btn-ttmh(for="ttmh") Thông tin mua hàng giốg như trên
+					.address-edit-other
+						.form-group.form-name
+							label(for="name") Họ tên
+							input(name="name" type="text" placeholder="Ví dụ: Nguyễn Văn C")
+						.form-group.form-phone
+							label(for="name") Số điện thoại
+							input(name="name" type="text" placeholder="Ví dụ: Nguyễn Văn C")
+							span (Nhân viên giao nhận sẽ liên hệ với SĐT này)
+						.form-group.form-email
+							label(for="name") Email
+							input(name="name" type="text" placeholder="Ví dụ: Nguyễn Văn C")
+						hr
+						.form-group.form-city
+							label Tỉnh/Thành phố
+							select(name="")
+								option -- chọn Tỉnh/Thành phố
+								option TP. Hồ Chí Minh
+								option Hà Nội
+								option Đăk Nông
+						.form-group.form-distric
+							label Quận/Huyện
+							select(name="")
+								option -- chọn Quận/Huyện
+								option TP. Hồ Chí Minh
+								option Hà Nội
+								option Đăk Nông
+						.form-group.form-address
+							label(for="name") Địa chỉ
+							input(name="name" type="text" placeholder="Ví dụ: Nguyễn Văn C")
+						.check-group
+							input#cntt(type="checkbox" name="Update_Address_SameBilling" checked="checked")
+							label#btn-cntt(for="cntt") Cập nhật thông tin mua hàng giốg như trên
+				
+				.cart-bill-export
+					input#Invoice_Required(type="checkbox" name="Invoice_Required")
+					label#btn-xuathd(for="Invoice_Required") Yêu cầu xuất hóa đơn GTGT cho đơn hàng này
+				.cart-bill-info
+					p Vui lòng điền đầy đủ thông tin công ty để nhận hóa đơn GTGT
+					.form-group.form-taxcode
+						label Mã số thuế
+						input(type="text" name="Invoice_CompanyTaxCode")
+					.form-group.form-company-name
+						label Tên công ty
+						input(type="text" name="Invoice_CompanyName")
+					.form-group.form-company-address
+						label Địa chỉ công ty
+						input(type="text" name="Invoice_CompanyAddress")
+				
+				.cart-title
+					h3
+						span.fas.fa-shopping-cart
+						span Sử dụng mã giảm giá
+				.cart-coupon
+					p Vui lòng điền đầy đủ thông tin công ty để nhận hóa đơn GTGT
+					.form-group
+						input#coupon(type="text", name="coupon")
+						button Áp dụng
+					.desc
+						i Sau khi áp dụng, Mã giảm giá có thể không dùng được trong vòng 15 phút.
+						p Trong quá trình thanh toán, sẽ tạm khóa mã giảm giá của quý khách để đảm bảo phiên giao dịch được ổn định. Mã giảm giá sẽ được mở lại ngay khi phiên giao dịch kết thúc
+				
+				.cart-button-checkout
+					a.btn.btn-prev(href="#")
+						span.mdi.mdi-chevron-left
+						span Tiếp tục mua hàng
+					a.btn.btn-next(href="#")
+						span Tiến hành thanh toán
+						span.mdi.mdi-chevron-right
+			
+			.col-lg-4
+				.cart-title
+					h3
+						span.fas.fa-shopping-cart
+						span Giỏ hàng (
+						span 2 
+						span sản phẩm)
+				.cart-order-summary
+					table
+						tbody
+							tr
+								td
+									figure
+										a(href="")
+											img(src="./img/product/4.png", alt="")
+										figcaption
+											h4 
+												a(href="") Router Linksys
+											p EA6100-EJ
+								td 
+									p.price 551.000 đ
+									p 
+										span x 
+										span.quantity 2
+									p.total-price 1.100.000
+							tr
+								td
+									figure
+										a(href="")
+											img(src="./img/product/4.png", alt="")
+										figcaption
+											h4 
+												a(href="") Router Linksys
+											p EA6100-EJ
+								td 
+									p.price 551.000 đ
+									p 
+										span x 
+										span.quantity 2
+									p.total-price 1.100.000
+							tr.amount.price
+								td Tổng tiền
+								td 2.200.000 đ
+							tr.amount.sale
+								td Giảm giá
+									span.fas.fa-question-circle(data-toggle="tooltip" data-placement="top" title="Tooltip nội dung ở đây")
+								td 199.000 đ
+							tr.amount.shipping
+								td Phí vận chuyển
+								td 50.000 đ
+							tr.amount.price
+								td Số tiền phải thanh toán
+								td 10.000.000 đ
+			

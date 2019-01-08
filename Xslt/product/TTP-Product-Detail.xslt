@@ -45,31 +45,37 @@
 												</span>
 											</th>
 										</tr>
-										<!-- <tr>
-											<td>Công dụng chính</td>
-											<td>Công Dụng Bất Ngờ Hỗ Trợ Sức Khỏe Đến Từ Tinh Dầu Hoa Hồng Hoa hồng vốn được mệnh danh là nữ hoàng của
-												các loài hoa...</td>
-										</tr>
-										<tr>
-											<td>Dung tích</td>
-											<td>500 ml</td>
-										</tr> -->
+
 										<xsl:value-of select="/ProductDetail/BriefContent" disable-output-escaping="yes"></xsl:value-of>
 
 										<tr>
 											<td>Số lượng</td>
 											<td>
 												<div class="quantity">
+
 													<div class="form-group">
-														<input id="demo1" type="text" value="55" name="demo1">
-													</input>
+														<input type="text" value="1">
+														<xsl:attribute name="name">
+															<xsl:text>addtocart_</xsl:text>
+															<xsl:value-of select="/ProductDetail/ProductId" disable-output-escaping="yes"></xsl:value-of>
+															<xsl:text>.EnteredQuantity</xsl:text>
+														</xsl:attribute>
+
+														</input>
 													</div>
 												</div>
 											</td>
 										</tr>
 									</tbody>
 								</table>
-							</div><a class="btn btn-buy" href="#">mua sản phẩm</a>
+							</div>
+
+							<a class="btn btn-buy" href="#!" data-action="addcart" data-url="" onclick="AjaxCart.addproducttocart_details(this); return false;">
+									<xsl:attribute name="data-productid">
+										<xsl:value-of select="/ProductDetail/ProductId"></xsl:value-of>
+									</xsl:attribute>
+									Mua sản phẩm
+								</a>
 							<div class="social-networks nav">
 								<div class="nav-item">
 									<div class="fb-share-button" data-href="" data-layout="button" data-size="small" data-mobile-iframe="true"><a
@@ -187,7 +193,7 @@
 	<xsl:template match="ProductImages" mode="Thumbnail">
 		<div class="item">
 			<a>
-				<xsl:attribute name="hreft">
+				<xsl:attribute name="href">
 					<xsl:value-of select="ThumbnailUrl"></xsl:value-of>
 				</xsl:attribute>
 				<figure>
@@ -223,22 +229,34 @@
 					</div>
 					<figcaption>
 						<h3>
-								<xsl:value-of select="Title"></xsl:value-of>
+							<xsl:value-of select="Title"></xsl:value-of>
 
 						</h3>
 						<p class="price">
-                                <xsl:value-of select="Price"></xsl:value-of>
+							<xsl:value-of select="Price"></xsl:value-of>
 
 							<span class="discount">
-									<xsl:value-of select="OldPrice"></xsl:value-of>
+								<xsl:value-of select="OldPrice"></xsl:value-of>
 
-							</span></p>
-						<p class="new">- 20%</p>
+							</span>
+						</p>
+						<p class="new">
+							<xsl:text>-</xsl:text>
+							<xsl:call-template name="get-discount-percentage">
+								<xsl:with-param name="param-currentPrice" select="Price" />
+								<xsl:with-param name="param-oldPrice" select="OldPrice" />
+							</xsl:call-template>
+							<xsl-text>%</xsl-text>
+						</p>
 						<div class="buy-block"><a href="#">
 								<div class="btn btn-put"> <span class="fas fa-shopping-cart"></span>Cho vào giỏ hàng</div>
-							</a><a href="/product-detail.html">
+							</a>
+							<a href="/product-detail.html">
 								<div class="btn btn-more">Xem thêm</div>
-							</a></div>
+							</a>
+							<xsl:value-of select="/ProductDetail/EditLink" disable-output-escaping="yes"></xsl:value-of>
+
+						</div>
 					</figcaption>
 				</figure>
 			</div>
@@ -321,5 +339,30 @@
 			</div>
 		</div>
 	</xsl:template>
-
+	<xsl:template name="get-discount-percentage">
+		<xsl:param name="param-currentPrice" />
+		<xsl:param name="param-oldPrice" />
+		<xsl:variable name="currentPriceFormated">
+			<xsl:call-template name="strip-end-characters">
+				<xsl:with-param name="text" select="Price" />
+				<xsl:with-param name="strip-count" select="2" />
+			</xsl:call-template>
+		</xsl:variable>
+		<xsl:variable name="oldPriceFormated">
+			<xsl:call-template name="strip-end-characters">
+				<xsl:with-param name="text" select="OldPrice" />
+				<xsl:with-param name="strip-count" select="2" />
+			</xsl:call-template>
+		</xsl:variable>
+		<xsl:variable name="currentPriceNumber" select="number(translate($currentPriceFormated, '.', ''))">
+		</xsl:variable>
+		<xsl:variable name="oldPriceNumber" select="number(translate($oldPriceFormated, '.', ''))">
+		</xsl:variable>
+		<xsl:value-of select="round((1 - ($currentPriceNumber div $oldPriceNumber))*100)"></xsl:value-of>
+	</xsl:template>
+	<xsl:template name="strip-end-characters">
+		<xsl:param name="text" />
+		<xsl:param name="strip-count" />
+		<xsl:value-of select="substring($text, 1, string-length($text) - $strip-count)" />
+	</xsl:template>
 </xsl:stylesheet>

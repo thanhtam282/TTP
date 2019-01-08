@@ -1,0 +1,127 @@
+.checkout
+	.login-wrap
+		width: 100%
+		padding: 3rem 24px
+		input[type='text'],input[type='password']
+			width: 100%
+			max-width: 400px
+			height: 40px
+			border-radius: 5px
+			border: 1px solid #e6e6e6
+			padding: 0 1.2rem
+			font-size: .92857rem
+			font-weight: 300
+			color: #333
+			&:focus
+				outline: 0
+				box-shadow: 0 0 .2rem #2366a6
+				border-color: #2366a6
+		input[type='radio']
+			display: none
+		label
+			padding-left: 2rem
+			position: relative
+			font-size: .92857rem
+			font-weight: 300
+			color: #333
+			&:before
+				content: ""
+				width: 15px
+				height: 15px
+				border: 1px solid gray
+				position: absolute
+				left: 0
+				top: 2px
+				border-radius: 50%
+			&.active
+				&:before
+					border: 5px solid #2366a6
+		.type-new-user 
+			.form-user-new 
+				padding-left: 15px
+				+media-breakpoint-up(lg)
+					padding: 14px 30px
+				.checkout-w-register,.checkout-wo-register
+					.form-group
+						display: flex
+						flex-wrap: wrap
+						.fa-exclamation-triangle
+							display: inline-block
+							width: 100%
+							text-align: right
+							font-family: 'Montserrat', sans-serif
+							font-weight: 500
+							font-size: 14px
+							color: red
+							&:before
+								// font-family: $faf
+								font-family: "FontAwesome"
+
+								font-weight: 900
+					.form-button 
+						input[type='submit']
+							border-radius: 5px
+							max-width: 400px
+							background-image: linear-gradient(0deg,#237f50,#2ab46e)
+							font-size: 1.07143rem
+							font-weight: 700
+							color: #fff
+							border: 0
+							outline: none
+							width: 100%
+							height: 40px
+							display: flex
+							align-items: center
+							justify-content: center
+							&:before
+								// +fontawesome('\f105', $faf)
+								content: "\f105"
+								font-family: "FontAwesome"
+				.checkout-wo-register
+					.form-group
+						label
+							width: 100%
+							padding-left: 0
+							&:before
+								content: none
+		.type-old-user 
+			.form-login
+				padding-left: 15px
+				+media-breakpoint-up(lg)
+					padding: 14px 30px
+				.form-group
+					display: flex
+					flex-wrap: wrap
+					.fa-exclamation-triangle
+						display: inline-block
+						width: 100%
+						text-align: right
+						font-family: 'Montserrat', sans-serif
+						font-weight: 500
+						font-size: 14px
+						color: red
+						&:before
+							// font-family: $faf
+							font-family: "FontAwesome"
+
+							font-weight: 900
+				.module-title
+					position: relative
+					font-size: .92857rem
+					font-weight: 300
+					color: #333
+					margin-bottom: 1rem
+				.btn-continue
+					border-radius: 5px
+					max-width: 400px
+					background-image: linear-gradient(0deg,#237f50,#2ab46e)
+					font-size: 1.07143rem
+					font-weight: 700
+					color: #fff
+					border: 0
+					outline: none
+					width: 100%
+					height: 40px
+					display: flex
+					align-items: center
+					justify-content: center

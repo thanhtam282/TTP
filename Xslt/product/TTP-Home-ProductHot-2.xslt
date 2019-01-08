@@ -65,7 +65,10 @@
 						<xsl-text>%</xsl-text>
 					</p>
 						<div class="buy-block">
-						<a href="javascript:void(0)">
+						<a href="javascript:void(0)" onclick="AjaxCart.addproducttocart_catalog(this);return false;">
+						<xsl:attribute name="data-productid">
+								<xsl:value-of select="ProductId"></xsl:value-of>
+							</xsl:attribute>
 
 								<div class="btn btn-put"> <span class="fas fa-shopping-cart"></span>Cho vào giỏ hàng</div>
 							</a>

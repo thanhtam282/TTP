@@ -1,0 +1,87 @@
+section.checkout
+	.container
+		.row
+			.col-lg-8
+				.cart-title
+					h3
+						span.fas.fa-shopping-cart
+						span Phương thức thanh toán
+				.cart-payment-method
+					.method
+						input#shipping-1(type="radio", name="shipping-method" checked)
+						label.active(for="shipping-1")
+							.img
+								img(src="./img/shipping_method_1.png", alt="")
+							.text
+								h5 Thanh toán khi nhận hàng
+								p Quý khách sẽ thanh toán bằng tiền mặt khi shop Mua xuan giao hàng cho quý khách
+					.method
+						input#shipping-2(type="radio", name="shipping-method")
+						label(for="shipping-2")
+							.img
+								img(src="./img/shipping_method_2.png", alt="")
+							.text
+								h5 Thanh toán bằng chuyển khoản
+								p Quý khách vui lòng chuyển khoản vào tài khoản: Lê Văn Tèo Anh
+								p Số tài khoản: 024015005082 - Ngân hàng Ngoại thương TP. Hồ Chí Minh (Vietcombank)
+				.cart-button-checkout
+					a.btn.btn-prev(href="#")
+						span.mdi.mdi-chevron-left
+						span Tiếp tục mua hàng
+					a.btn.btn-next(href="#")
+						span Tiến hành thanh toán
+						span.mdi.mdi-chevron-right
+			.col-lg-4
+				.cart-title
+					h3
+						span.fas.fa-shopping-cart
+						span Giỏ hàng (
+						span 2 
+						span sản phẩm)
+				.cart-order-summary
+					table
+						tbody
+							tr
+								td
+									figure
+										a(href="")
+											img(src="./img/product/4.png", alt="")
+										figcaption
+											h4 
+												a(href="") Router Linksys
+											p EA6100-EJ
+								td 
+									p.price 551.000 đ
+									p 
+										span x 
+										span.quantity 2
+									p.total-price 1.100.000
+							tr
+								td
+									figure
+										a(href="")
+											img(src="./img/product/4.png", alt="")
+										figcaption
+											h4 
+												a(href="") Router Linksys
+											p EA6100-EJ
+								td 
+									p.price 551.000 đ
+									p 
+										span x 
+										span.quantity 2
+									p.total-price 1.100.000
+							tr.amount.price
+								td Tổng tiền
+								td 2.200.000 đ
+							tr.amount.sale
+								td Giảm giá
+									span.fas.fa-question-circle(data-toggle="tooltip" data-placement="top" title="Tooltip nội dung ở đây")
+								td 199.000 đ
+							tr.amount.shipping
+								td Phí vận chuyển
+								td 50.000 đ
+							tr.amount.price
+								td Số tiền phải thanh toán
+								td 10.000.000 đ
+			

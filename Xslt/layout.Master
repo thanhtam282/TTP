@@ -147,16 +147,7 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
                         <div class="col">
                             <div class="ttp-slider-1">
                                     <portal:ModuleWrapper ID="mdl219" runat="server" ConfigureModuleId="219" />
-                                <!-- <div class="list-items">
-                                    <div class="item"><img src="./img/global/footer_slider_1.png" alt=""></div>
-                                    <div class="item"><img src="./img/global/footer_slider_2.png" alt=""></div>
-                                    <div class="item"><img src="./img/global/footer_slider_3.png" alt=""></div>
-                                    <div class="item"><img src="./img/global/footer_slider_4.png" alt=""></div>
-                                    <div class="item"><img src="./img/global/footer_slider_5.png" alt=""></div>
-                                    <div class="item"><img src="./img/global/footer_slider_1.png" alt=""></div>
-                                    <div class="item"><img src="./img/global/footer_slider_4.png" alt=""></div>
-                                    <div class="item"><img src="./img/global/footer_slider_5.png" alt=""></div>
-                                </div> -->
+
                             </div>
                         </div>
                     </div>
@@ -253,6 +244,8 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
     <!-- ////////////// Javascript Include ////////////// -->
     <script src="/Data/Sites/1/skins/default/js/core.min.js?v=1.0.0"></script>
     <script src="/Data/Sites/1/skins/default/js/main.min.js?v=1.0.0"></script>
+	<script src="/Data/Sites/1/skins/default/js/ecommerce.js?v=1.0.0" type="text/javascript"></script>
+
     <!-- <script src="/Data/Sites/1/skins/default/js/plugins.js?v=1.0.0"></script> -->
     <!-- <script src="/Data/Sites/1/skins/default/js/app.js?v=1.0.0"></script> -->
     <script type="text/javascript">

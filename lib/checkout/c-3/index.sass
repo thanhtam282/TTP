@@ -1,0 +1,200 @@
+.checkout
+	&.checkout-method
+		margin-bottom: r(30px)
+		+media-breakpoint-up(lg)
+			margin-bottom: r(60px)
+	.checkout-address-edit
+		padding-bottom: r(30px)
+		+media-breakpoint-up(lg)
+			padding-bottom: r(60px)
+		.form-group
+			display: flex
+			flex-wrap: wrap
+			span
+				font-size: r(11px)
+				font-weight: 400
+				color: lighten(black,20%)
+			label
+				flex: 0 0 100%
+				font-size: r(12px)
+				font-weight: 400
+				color: lighten(black,20%)
+			input,select,textarea
+				background-color: #fff
+				background-clip: padding-box
+				border: 1px solid #ced4da
+				border-radius: 5px
+				width: 100%
+				font-size: r(12px)
+				&:focus
+					outline: none
+					box-shadow: 0 0 .25rem color-get($mau, main)
+					border-color: color-get($mau, main)
+			textarea
+				height: 55px
+				padding: .5rem .75rem
+			input,select
+				height: 40px
+				padding: 0 .75rem
+				option
+					color: lighten(black,20%)
+			+media-breakpoint-up(sm)
+				label
+					flex: 0 0 180px
+				input, select, textarea
+					flex: 0 0 calc(100% - 180px)
+				span
+					margin-left: auto
+					align-self: center
+			+media-breakpoint-up(md)
+				&.form-phone
+					input
+						flex: 0 0 calc(50% - 90px)
+					span
+						flex: 0 0 calc(50% - 105px)
+						order: 3
+					label.error
+						margin-left: calc(50% - 90px)
+						order: 4
+			input.error
+				border: 1px solid red
+				box-shadow: 0 0 .25rem red
+			label.error
+				font-family: 'Montserrat',sans-serif
+				top: 42px
+				right: 10px
+				color: red
+				font-weight: 400
+				width: 100%
+				font-size: 11px
+				margin-top: .5rem
+				margin-left: auto
+				text-align: right
+				&:before
+					font-weight: 900
+					margin-right: .325rem
+					content: '\f06a'
+					font-family: 'Font Awesome 5 Free'
+		.check-group
+			display: flex
+			margin-bottom: 1rem
+			input
+				margin-right: .75rem
+				display: none
+			label
+				flex: 0 0 100%
+				font-size: r(12px)
+				font-weight: 400
+				color: lighten(black,20%)
+				position: relative
+				padding-left: 2rem
+				&:before
+					width: 12px
+					height: 12px
+					position: absolute
+					top: 2px
+					left: 0
+					// +fontawesome('\f00c', $faf)
+
+
+					font-family: "FontAwesome"
+					content: "\f00c"
+
+					border: 0
+					font-size: r(8px)
+					color: lighten(black,20%)
+					border: 1px solid darken(white,15%)
+					+flex-center
+				&.active
+					&:before
+						content: ''
+		.cart-address
+			background-color: darken(white, 3%)
+			border-radius: 5px
+			padding: 15px
+			margin-bottom: 1rem
+			+media-breakpoint-up(sm)
+				padding-left: 30px
+				hr
+					max-width: calc(100% - 180px)
+					flex: 0 0 calc(100% - 180px)
+					margin: 1.5rem 0 1.5rem auto
+			.address-edit-other
+				display: none
+		.cart-coupon
+			background-color: darken(white, 3%)
+			border-radius: 5px
+			padding: 15px
+			margin-bottom: 2.5rem
+			+media-breakpoint-up(sm)
+				padding-left: 30px
+			p
+				font-size: r(12px)
+				font-weight: 400
+				color: lighten(black,20%)
+				margin-bottom: .5rem
+			.desc
+				font-size: r(12px)
+				color: lighten(black,20%)
+				i
+					color: lighten(black,40%)
+					margin-bottom: .5rem
+					display: block
+			.form-group
+				position: relative
+				max-width: 300px
+				input
+					flex: 0 0 100%
+					&:focus
+						outline: none
+						box-shadow: 0 0 .25rem color-get($mau, main)
+						border-color: color-get($mau, main)
+				button
+					position: absolute
+					right: 0
+					top: 0
+					height: 40px
+					padding: 0 1.25rem
+					+grad2
+					border: 0
+					outline: 0
+					border-top-right-radius: 5px
+					border-bottom-right-radius: 5px
+					color: white
+		.cart-bill-export
+			input
+				display: none
+			label
+				position: relative
+				font-size: r(15px)
+				padding-left: 2rem
+				&:before
+					content: ''
+					width: 14px
+					height: 14px
+					position: absolute
+					top: 4px
+					left: 0
+					color: color-get($mau, main)
+					border: 1px solid color-get($mau, main)
+					border-radius: 3px
+				&.active
+					&:before
+						// +fontawesome('\f14a', $faf)
+						content: "\f14a"
+						font-family: "FontAwesome"
+
+						border: 0
+		.cart-bill-info
+			display: none
+			background-color: darken(white, 3%)
+			border-radius: 5px
+			padding: 15px
+			margin-bottom: 1rem
+			+media-breakpoint-up(sm)
+				padding-left: 30px
+			p
+				font-size: r(12px)
+				font-weight: 400
+				color: lighten(black,20%)
+				margin-bottom: 1rem

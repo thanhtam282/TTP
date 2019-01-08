@@ -10,19 +10,28 @@
 					<div class="col">
 						<div class="title">
 							<h2>
-								<xsl:value-of select="/NewsList/ZoneTitle"></xsl:value-of>
+								<xsl:value-of select="/NewsList/ModuleTitle"></xsl:value-of>
 
 							</h2>
 						</div>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row ajaxwrapper">
 					<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
 
 
 				</div>
 				<div class="row">
-					<div class="col"><a class="btn btn-show-more" href="#">Xem Them</a></div>
+					<div class="col">
+						<xsl:if test="/NewsList/NextPageUrl!=''">
+							<a class="btn btn-show-more ajaxpagerlink">
+								<xsl:attribute name="href">
+									<xsl:value-of select="/NewsList/NextPageUrl" />
+								</xsl:attribute>
+								<xsl:text>Xem thêm</xsl:text>
+							</a>
+						</xsl:if>
+					</div>
 				</div>
 			</div>
 		</section>

@@ -1,0 +1,17 @@
+extends _layout/_layout.pug
+
+block var
+	- title = 'media-photo'
+	- bodyClass = 'media-photo-page'
+
+block header
+	include ../lib/header/index.pug
+block main
+	include ../lib/banner/b-1/index.pug
+	include ../lib/breadcrumb/b-1/index.pug
+	include ../lib/product/p-1/index-media.pug
+	include ../lib/media-photo/m-1/index.pug
+	include ../lib/media-photo/m-2/index.pug
+	
+block footer
+	include ../lib/footer/f-1/index.pug

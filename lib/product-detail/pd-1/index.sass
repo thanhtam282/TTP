@@ -1,4 +1,7 @@
 .ttp-product-detail-1
+	+after-img(home_small_3)
+	// &:after
+	// 	top: -75% !important
 	.product-details
 		padding: 2rem 0
 		+media-breakpoint-down(sm)
@@ -263,15 +266,3 @@
 			.slick-track
 				height: 100%
 
-.lg-backdrop
-	background: color-rgba(color-get($mau,den),.3)
-.lg
-	.lg-inner
-		.lg-item
-			+flex-center()
-
-			.lg-img-wrap
-				width: 50%
-				height: 50%
-				margin: auto
-				background: color-get($mau, trang)

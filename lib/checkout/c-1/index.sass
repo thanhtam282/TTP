@@ -1,0 +1,437 @@
+.checkout
+	margin-bottom: 3.75rem
+	+media-breakpoint-down(md)
+		margin-bottom: 5rem
+	.cart-title
+		margin-top: r(21px)
+		margin-bottom: .5rem
+		h3
+			font-size: r(15px)
+			font-weight: 700
+			color: lighten(black, 20%)
+			text-transform: uppercase
+			span:first-child
+				margin-right: 1rem
+				color: lighten(color-get($mau, main),10%)
+	.cart-table-list
+		.quantity
+			display: flex
+			background-color: darken(white,4%)
+			border-radius: 15px
+			max-width: 90px
+			margin: auto
+			span
+				flex: 0 0 30px
+				height: 30px
+				+flex-center
+				cursor: pointer
+				&::selection
+					background: none
+			input
+				flex: 0 0 30px
+				max-width: 30px
+				height: 30px
+				border: 0
+				background: none
+				text-align: center
+				&::selection
+					background: none
+				&:focus
+					outline: 0
+		table
+			width: 100%
+			border: 3px solid darken(white,3%)
+			thead
+				+media-breakpoint-down(sm)
+					display: none
+				tr
+					background-color: darken(white,5%)
+					height: 3rem
+					border-bottom: 1px solid darken(white,15%)
+					th
+						vertical-align: middle
+						font-size: r(15px)
+						font-weight: 400
+						&:first-child
+							width: calc(100% / 3)
+							text-align: left
+							padding-left: 1rem
+						&:nth-child(2)
+							width: calc(100% / 4)
+							text-align: center
+						&:nth-child(3)
+							width: calc(100% / 6)
+							text-align: center
+						&:last-child
+							text-align: right
+							padding-right: 21px
+			tbody
+				tr
+					height: 100px
+					td
+						vertical-align: middle
+						font-size: r(15px)
+						font-weight: 400
+						&:first-child
+							text-align: left
+							padding-left: 1rem
+							position: relative
+							width: 45%
+						&:nth-child(2)
+							text-align: center
+						&:nth-child(3)
+							text-align: center
+						&:last-child
+							text-align: right
+							padding-right: 21px
+							color: #f30a0a
+					+ tr
+						border-top: 1px solid darken(white,15%)
+					+media-breakpoint-down(sm)
+						padding-top: 20px
+						td
+							&:first-child
+								margin-top: 1rem
+								padding-left: 0
+								width: 100%
+								vertical-align: middle
+								padding-right: 1rem
+							&:nth-child(2), &:nth-child(3), &:last-child
+								float: right
+								width: 100px
+								text-align: right
+								padding-right: 15px
+								margin-top: .5rem
+							&:nth-child(2)
+								margin-top: 1rem
+					figure
+						display: inline-flex
+						align-items: center
+						margin-bottom: 0
+						img
+							max-width: 60px
+						figcaption
+							h4, p
+								font-size: r(13px)
+								font-weight: 400
+								color: lighten(black,20%)
+					.removeproduct
+						display: inline-flex
+						position: absolute
+						right: 20px
+						top: 50%
+						transform: translateY(-50%)
+						width: 25px
+						height: 25px
+						border-radius: 50%
+						background: color-get($mau, main)
+						color: white
+						display: flex
+						justify-content: center
+						align-items: center
+						cursor: pointer
+	.cart-total-price
+		margin-top: 1rem
+		text-align: right
+		p
+			font-size: r(15px)
+			font-weight: 400
+			span.price-temp
+				font-size: r(20px)
+				font-weight: 700
+				color: #ff0000
+	.cart-button-checkout
+		display: flex
+		flex-wrap: wrap
+		margin-top: 1rem
+		flex-direction: column
+		align-items: center
+		@media (min-width: 480px)
+			flex-direction: row
+			justify-content: space-between
+		.btn
+			+flex-center
+			height: 35px
+			max-width: r(210px)
+			line-height: 1
+			span
+				font-size: r(13.5px)
+				&:first-child
+					margin-right: .5rem
+				&.mdi
+					font-size: r(22px)
+			&.btn-prev
+				margin-bottom: 20px
+				background: darken(white, 7%)
+				@media (min-width: 480px)
+					margin-bottom: 0
+				span
+					color: lighten(black,20%)
+			&.btn-next
+				+grad1
+				span
+					color: white
+	.cart-order-summary
+		overflow: hidden
+		border-radius: 5px
+		border: 1px solid lighten(black,85%)
+		margin-bottom: r(30px)
+		+media-breakpoint-up(lg)
+			margin-bottom: 0
+		table
+			width: 100%
+			tr
+				td
+					padding: 1rem 10px
+					figure
+						display: flex
+						align-items: center
+						margin-bottom: 0
+						a
+							flex: 0 0 70px
+							max-width: 70px
+							border: 1px solid lighten(black,85%)
+							margin-right: 1rem
+							img
+								width: 100%
+						figcaption
+							h4,p
+								text-transform: uppercase
+								font-weight: 500
+								font-size: r(11.5px)
+								+media-breakpoint-up(sm)
+									font-size: r(13px)
+								a
+									margin-right: 0
+									border: 0
+									color: lighten(black,20%)
+					&:last-child
+						text-align: right
+						width: 100px
+						font-size: r(11.5px)
+						+media-breakpoint-up(sm)
+							font-size: r(13px)
+							width: 120px
+						p
+							font-weight: 500
+							font-size: r(11.5px)
+							+media-breakpoint-up(sm)
+								font-size: r(13px)
+							&.total-price
+								color: color-get($mau, extra)
+				+ tr
+					border-top: 1px solid darken(white,8%)
+				&.amount
+					td
+						padding-top: .65rem
+						padding-bottom: .65rem
+						font-weight: 600
+						&:first-child
+							color: lighten(black,20%)
+					&.sale
+						td
+							&:first-child
+								span
+									margin-left: 3rem
+									color: darken(white, 40%)
+							&:last-child
+								color: color-get($mau, extra)
+					&.price
+						td
+							&:last-child
+								color: #ff0000
+					&.shipping
+						td
+							&:last-child
+								color: color-get($mau, extra)
+.viewed-product
+	padding: r(30px) 15px
+	+media-breakpoint-up(lg)
+		padding: r(60px) 15px
+	.swiper-container
+		.swiper-button-prev
+			width: 40px
+			height: 40px
+			+flex-center
+			background-image: none
+			z-index: 20
+			left: 0
+			&.swiper-button-disabled
+				pointer-events: initial
+			span
+				font-size: r(35px)
+		.swiper-button-next
+			width: 40px
+			height: 40px
+			+flex-center
+			background-image: none
+			z-index: 20
+			right: 0
+			&.swiper-button-disabled
+				pointer-events: initial
+			span
+				font-size: r(35px)
+		.swiper-wrapper
+			.swiper-slide
+				.product
+					flex: 0 0 20%
+					padding: 10px
+					+media-breakpoint-down(lg)
+						flex: 0 0 25%
+					+media-breakpoint-down(md)
+						flex: 0 0 33.333%
+					+media-breakpoint-down(sm)
+						flex: 0 0 50%
+					+media-breakpoint-down(xs)
+						width: r(157px)
+
+					figure
+						cursor: pointer
+						box-shadow: 0px 0px 11px 0px rgba(0,0,0,0.29)
+
+						border-radius: r(10px)
+						background: color-get($mau, trang)
+						padding: r(27px) 1rem
+						height: 100%
+						position: relative
+						overflow: hidden
+						+media-breakpoint-down(xs)
+							padding: 1rem
+						.boxzoom
+							overflow: hidden
+							+flex-center()
+							img
+								width: 100%
+						&:after
+							position: absolute
+							top: -100%
+							display: block
+							width: 100%
+							height: 100%
+							left: 0
+							content: ''
+							transition: .4s all ease-in-out
+							background: color-rgba(color-get($mau,trang),.85)
+						&:before
+							left: 0
+							transition: .4s all ease-in-out
+							position: absolute
+							bottom: -100%
+							display: block
+							width: 100%
+							height: 100%
+							content: ''
+							background: color-rgba(color-get($mau,trang),.85)
+
+						figcaption
+							+flex-center()
+							flex-direction: column
+							h3
+								font-size: r(14px)
+								font-weight: 500
+								color: color-get($mau,text-3)
+								margin-top: r(23px)
+								margin-bottom: r(10px)
+								text-align: left
+								width: 100%
+								height: 2rem
+								line-height: 1rem
+								+line(2)
+							p
+								width: 100%
+								font-size: 1rem
+								color: color-get($mau,main)
+								font-weight: 500
+								text-align: left
+								display: flex
+								+media-breakpoint-down(sm)
+									text-align: center
+								span
+									margin-left: auto
+									color: color-get($mau,text-9)
+									font-size: r(14px)
+									text-decoration: line-through
+									+media-breakpoint-down(xs)
+										padding: 0
+										display: block
+							.new, .stt
+								+flex-center()
+								font-size: r(14px)
+								position: absolute
+								left: 0
+								top: r(20px)
+								width: r(60px)
+								height: r(26px)
+								background: color-get($mau, extra)
+								color: color-get($mau,trang)
+								border-top-right-radius: r(13px)
+								border-bottom-right-radius: r(13px)
+								+media-breakpoint-down(xs)
+									width: 2.75rem
+									font-size: r(12px)
+							.stt
+								background: color-get($mau, main)
+								left: auto
+								right: 0
+								border-top-right-radius: 0
+								border-bottom-right-radius: 0
+								border-top-left-radius: r(13px)
+								border-bottom-left-radius: r(13px)
+
+							.buy-block
+								z-index: -1
+								position: absolute
+								top: 0
+								left: 0
+								width: 100%
+								height: 100%
+								+flex-center()
+								flex-direction: column
+								a
+									display: block
+									width: 100%
+									margin-bottom: 1rem
+									.fa
+										+flex-center()
+										margin: 0 auto
+									.btn , .fa
+										padding: 0
+										font-size: r(14px)
+										width: 80%
+										height: 0
+										color: color-get($mau,extra)
+										border: 1px solid color-get($mau,extra)
+										border-radius: 5px
+										transition: height 1s ease-in-out , padding 1s  ,  .3s background  ease-in-out ,  .3s color ease-in-out 
+										// transition: .3s color 
+										overflow: hidden
+										span
+											margin-right: 5px
+											font-size: r(14px)
+											+media-breakpoint-down(sm)
+												height: 100%
+												+flex-center()
+										&:hover
+											background: color-get($mau, extra)
+											color: color-get($mau,trang)
+									&:last-child()
+										margin-bottom: 0
+									+media-breakpoint-down(sm)
+										&:first-child
+											.btn
+												font-size: 0
+
+						&:hover
+							text-decoration: none
+							&:after
+								top: -50%
+							&:before
+								bottom: -50%
+							figcaption
+								.buy-block
+									height: 100%
+									transition-delay: .4s
+									z-index: 999
+									.btn, .fa
+										padding:  .5rem 0
+										height: r(40px)

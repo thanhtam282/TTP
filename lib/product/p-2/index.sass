@@ -105,17 +105,18 @@
 						color: color-get($mau,main)
 						font-weight: 500
 						text-align: left
+						display: flex
 						+media-breakpoint-down(sm)
 							text-align: center
 						span
-							padding-left: r(20px)
 							color: color-get($mau,text-9)
+							margin-left: auto
 							font-size: r(14px)
 							text-decoration: line-through
 							+media-breakpoint-down(xs)
 								padding: 0
 								display: block
-					.new
+					.new, .stt
 						+flex-center()
 						font-size: r(14px)
 						position: absolute
@@ -130,6 +131,15 @@
 						+media-breakpoint-down(xs)
 							width: 2.75rem
 							font-size: r(12px)
+					.stt
+						background: color-get($mau, main)
+						left: auto
+						right: 0
+						border-top-right-radius: 0
+						border-bottom-right-radius: 0
+						border-top-left-radius: r(13px)
+						border-bottom-left-radius: r(13px)
+
 					.buy-block
 						z-index: -1
 						position: absolute
@@ -143,7 +153,10 @@
 							display: block
 							width: 100%
 							margin-bottom: 1rem
-							.btn
+							.fa
+								+flex-center()
+								margin: 0 auto
+							.btn , .fa
 								padding: 0 .5rem
 								font-size: r(14px)
 								width: 80%
@@ -161,6 +174,10 @@
 									color: color-get($mau,trang)
 							&:last-child()
 								margin-bottom: 0
+							+media-breakpoint-down(sm)
+								&:first-child
+									.btn
+										font-size: 0
 
 
 				&:hover
@@ -175,7 +192,7 @@
 								height: 100%
 								transition-delay: .4s
 								z-index: 999
-								.btn
+								.btn, .fa
 									padding: .5rem
 									height: r(40px)
 

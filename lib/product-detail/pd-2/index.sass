@@ -23,11 +23,11 @@
 			position: relative
 			+media-breakpoint-down(lg)
 				flex: 0 0 50%
-				flex: 0 0 50%
 				margin-top: 1rem
 			+media-breakpoint-down(md)
-				flex: 0 0 100%
+				flex: none
 			+media-breakpoint-down(sm)
+				flex: 0 0 100%
 				margin-top: 1px
 			a
 				font-weight: 400
@@ -83,7 +83,7 @@
 				background-image: linear-gradient( transparent 50%, white 100%)
 			&.active
 				transition: .5s all ease-in-out
-				height: auto
+				height: auto !important
 				border: 0
 				&:after
 					display: none
@@ -92,7 +92,7 @@
 		overflow: hidden
 		display: flex
 		flex-direction: column
-		height: r(550px)
+		// height: r(550px)
 		+media-breakpoint-down(sm)
 			padding: 0
 

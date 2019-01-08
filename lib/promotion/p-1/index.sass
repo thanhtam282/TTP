@@ -3,6 +3,9 @@
 	margin-bottom: r(150px)
 	+media-breakpoint-down(sm)
 		margin-bottom: 2rem
+	+after-right(home_small_1)
+	&:after
+		top: -37% !important
 	h1
 		+head-title(text-3)
 		font-size: r(36px)
@@ -13,8 +16,10 @@
 	.col-lg-8
 		.boxzoom
 			border: 1px solid color-get($mau,main)
+			height: 100%
 		a
 			display: block
+			height: 100%
 			+media-breakpoint-down(sm)
 				margin-bottom: 1rem
 	.col-lg-4
@@ -24,6 +29,8 @@
 			flex-direction: column
 		a
 			display: block
+			&:nth-child(2)
+				margin-top: r(30px)
 			+media-breakpoint-down(sm)
 				margin-bottom: 1rem
 
@@ -48,4 +55,10 @@
 
 	.sub
 		.col-lg-4
-			margin-top: r(20px)
+			margin-top: r(30px)
+			a
+				height: 100%
+				.boxzoom
+					height: 100%
+	.ajaxwrapper
+		margin-top: r(30px)

@@ -9,26 +9,31 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-11 mx-auto">
+						<h1>
+							<xsl:value-of select="/NewsList/ZoneTitle"></xsl:value-of>
+
+						</h1>
+
+					</div>
+				</div>
+				<div class="row ajaxwrapper">
+					<div class="col-11 mx-auto ">
+						<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
+
+
 						<div class="row">
 							<div class="col">
-								<h1>
-									<xsl:value-of select="/NewsList/ZoneTitle"></xsl:value-of>
+								<!-- <a class="btn btn-show-more" href="promotion-detail.html">Xem thêm</a> -->
 
-								</h1>
+								<xsl:if test="/NewsList/NextPageUrl!=''">
+									<a class="btn btn-show-more ajaxpagerlink">
+										<xsl:attribute name="href">
+											<xsl:value-of select="/NewsList/NextPageUrl" />
+										</xsl:attribute>
+										<xsl:text>Xem thêm</xsl:text>
+									</a>
+								</xsl:if>
 							</div>
-						</div>
-						<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
-						<!-- <div class="row"> -->
-
-						<!-- </div> -->
-
-						<!-- <div class="row sub">
-							<xsl:apply-templates select="/NewsList/News" mode="ZoneNews2"></xsl:apply-templates>
-
-
-						</div> -->
-						<div class="row">
-							<div class="col"><a class="btn btn-show-more" href="promotion-detail.html">Xem thêm</a></div>
 						</div>
 					</div>
 				</div>
@@ -92,8 +97,6 @@
 				</div>
 			</a>
 		</xsl:if>
-
-
 
 		<xsl:if test="position() = 3 ">
 			<a>

@@ -21,7 +21,7 @@
 					<div class="col-12">
 						<div class="wrapper-product">
 							<div class="banner"><a href="#">
-									<img src="/Data/Sites/1/skins/default/img/home/home_banner_1.png" alt="">
+									<img src="/Data/Sites/1/skins/default/img/home/home_banner_1.jpg" alt="">
 									</img>
 								</a>
 							</div>
@@ -70,6 +70,14 @@
 						</xsl:call-template>
 						<xsl-text>%</xsl-text>
 					</p>
+					<xsl:choose>
+						<xsl:when test="floor(ShowOption div 1) mod 2 = 1">
+							<p class="stt">
+								<xsl:text>New</xsl:text>
+							</p>
+						</xsl:when>
+
+					</xsl:choose>
 					<div class="buy-block">
 						<a href="javascript:void(0)" onclick="AjaxCart.addproducttocart_catalog(this);return false;">
 							<xsl:attribute name="data-productid">

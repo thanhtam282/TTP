@@ -153,7 +153,7 @@
 						transition-delay: .4s
 						z-index: 999
 						.btn, .fa
-							padding: .5rem
+							padding: .5rem 0
 							height: r(40px)
 
 	.owl-nav
@@ -179,6 +179,9 @@
 			+media-breakpoint-up(sm)
 				+wh(r(50px))
 				right: r(52px)
+			+media-breakpoint-down(md)
+				color: color-get($mau,trang) !important
+				background: color-get($mau,main) !important
 			&:hover, &:active, &:focus
 				outline: none
 				background: transparent
@@ -192,6 +195,7 @@
 			// +fz(2rem) !important
 			font-size: 1.2rem !important
 			position: absolute
+
 			+media-breakpoint-down(xs)
 				left: 50%
 				transform: translateX(-50%)
@@ -199,9 +203,11 @@
 			+media-breakpoint-up(sm)
 				+wh(r(50px))
 				right: 0
+			+media-breakpoint-down(md)
+				color: color-get($mau,trang) !important
+				background: color-get($mau,main) !important
 			&:hover, &:active, &:focus
 				outline: none
-				background: transparent
 				+media-breakpoint-up(md)
 					color: color-get($mau,trang)
 					background: color-get($mau,main)

@@ -1,0 +1,59 @@
+.checkout
+	.cart-payment-method
+		background: darken(white,4%)
+		padding: 3rem 10px
+		margin-bottom: 3rem
+		.method
+			+media-breakpoint-up(sm)
+				padding-left: 2rem
+			+ .method
+				margin-top: 30px
+			input
+				display: none
+			label
+				background: white
+				display: flex
+				cursor: pointer
+				flex-direction: column
+				+media-breakpoint-up(sm)
+					flex-direction: row
+					position: relative
+					&:before
+						content: ''
+						position: absolute
+						width: 16px
+						height: 16px
+						border-radius: 50%
+						border: 1px solid darken(white,35%)
+						top: 50%
+						right: calc(100% + 12px)
+						transform: translateY(-50%)
+					
+				&.active
+					box-shadow: 0 0 .2rem darken(color-get($mau, main),5%)
+					+media-breakpoint-up(sm)
+						&:before
+							border: 5px solid color-get($mau, main)
+				.img
+					flex: 0 0 80px
+					min-height: 80px
+					+flex-center
+					border-right: 1px solid darken(white,4%)
+					+media-breakpoint-up(sm)
+						margin-right: 1rem
+					img
+						width: 60px
+				.text
+					display: flex
+					flex-direction: column
+					justify-content: center
+					padding: 10px
+					+media-breakpoint-up(sm)
+						padding: 1rem 0
+					h5,p
+						width: 100%
+						margin-bottom: 0
+						font-size: r(13px)
+						color: lighten(black,40%)
+					h5
+						margin-bottom: .5rem
