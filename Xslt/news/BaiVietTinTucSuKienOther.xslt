@@ -21,7 +21,7 @@
 
 
 				</div>
-				<div class="row">
+				<div class="row ajaxPagerLinkWrapper">
 					<div class="col">
 						<xsl:if test="/NewsList/NextPageUrl!=''">
 							<a class="btn btn-show-more ajaxpagerlink">

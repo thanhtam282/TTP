@@ -48,7 +48,12 @@
 						</div>
 						<figcaption>
 							<time>
-								<xsl:value-of select="CreatedDate"></xsl:value-of>
+								<xsl:value-of select="CreatedDD"></xsl:value-of>
+								<xsl:text>.</xsl:text>
+								<xsl:value-of select="CreatedMM"></xsl:value-of>
+								<xsl:text>.</xsl:text>
+								<xsl:value-of select="CreatedYYYY"></xsl:value-of>
+
 							</time>
 							<h3>
 								<xsl:value-of select="Title"></xsl:value-of>

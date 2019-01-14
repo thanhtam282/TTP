@@ -57,14 +57,24 @@
 	<!--Begin match ZoneNews-->
 	<xsl:template match="News" mode="ZoneNews1">
 		<div class="row">
-			<div class="col-xl-6">
-				<div class="quote">
-					<h2 class="title">
-						<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
+			<div class="col">
+				<figure>
+					<img>
+					<xsl:attribute name='src'>
+						<xsl:value-of select='ImageUrl'></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name='alt'>
+						<xsl:value-of select='Title'></xsl:value-of>
+					</xsl:attribute>
+					</img>
+					<figcaption class="quote">
+						<h2 class="title">
+							<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 
-					</h2>
-					<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
-				</div>
+						</h2>
+						<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
+					</figcaption>
+				</figure>
 			</div>
 		</div>
 	</xsl:template>

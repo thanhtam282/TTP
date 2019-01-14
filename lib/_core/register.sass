@@ -1,0 +1,32 @@
+.registerpage
+	.middle-fullwidth
+		margin-top: r(50px)
+		margin-bottom: r(150px)
+		+media-breakpoint-down(md)
+			margin-bottom: 3rem
+	h1
+		+head-title(main)
+		margin-bottom: 1rem
+	.form-group
+		label
+			margin-bottom: 0
+		input
+			height: r(40px)
+			// background: #eee
+			transition: .3s all ease-in-out
+			border: 1px solid #b3b3b3
+			&:hover, &:active, &:focus
+				outline: none
+				border: 1px solid #2ab46e
+
+
+		select
+			border: 1px solid #b3b3b3
+			background: #ffffff
+			width: 100%
+			height: r(40px)
+	.createuserbutton
+		background: color-get($mau, main)
+		color: color-get($mau,trang)
+
+		

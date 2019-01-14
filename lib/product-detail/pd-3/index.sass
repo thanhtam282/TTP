@@ -18,7 +18,7 @@
 		// +media-breakpoint-down(sm)
 		// 	flex: 0 0 50%
 		// +media-breakpoint-down(xs)
-		// 	width: r(157px)
+		// 	width: r(155px)
 
 		figure
 			cursor: pointer
@@ -63,12 +63,14 @@
 				flex-direction: column
 				h3
 					font-size: r(14px)
-					font-weight: 500
+					font-weight: 600
 					color: color-get($mau,text-3)
 					padding-top: r(23px)
 					padding-bottom: r(10px)
 					text-align: left
 					width: 100%
+					+media-breakpoint-down(xs)
+						text-align: center
 				p
 					width: 100%
 					font-size: 1rem
@@ -78,6 +80,8 @@
 					display: flex
 					+media-breakpoint-down(sm)
 						text-align: center
+					+media-breakpoint-down(xs)
+						display: block
 					span
 						margin-left: auto
 						color: color-get($mau,text-9)
@@ -130,6 +134,10 @@
 							overflow: hidden
 							span
 								margin-right: 5px
+								font-size: r(14px)
+								+media-breakpoint-down(sm)
+									height: 100%
+									+flex-center()
 							&:hover
 								background: color-get($mau, extra)
 								color: color-get($mau,trang)
@@ -151,7 +159,7 @@
 					.buy-block
 						height: 100%
 						transition-delay: .4s
-						z-index: 999
+						z-index: 9
 						.btn, .fa
 							padding: .5rem 0
 							height: r(40px)
@@ -162,10 +170,8 @@
 		position: absolute
 		top: r(-78px)
 		+media-breakpoint-down(xs)
-			top: auto
-			bottom: 0
-			left: 50%
-			transform: translateX(-50%)
+			top: 50%
+			transform: translateY(-50%)
 		.owl-prev
 			transition: .3s all ease-in-out
 			font-size: 1.2rem !important
@@ -173,9 +179,11 @@
 			position: absolute
 			border-radius: 0
 			+media-breakpoint-down(xs)
-				right: 50%
-				transform: translateX(-50%)
+				left: 0
 				// margin-right: 1rem
+				opacity: .6
+				border-radius: 3px
+
 			+media-breakpoint-up(sm)
 				+wh(r(50px))
 				right: r(52px)
@@ -197,8 +205,9 @@
 			position: absolute
 
 			+media-breakpoint-down(xs)
-				left: 50%
-				transform: translateX(-50%)
+				right: 0
+				opacity: .6
+				border-radius: 3px
 				margin-left: r(24px)
 			+media-breakpoint-up(sm)
 				+wh(r(50px))

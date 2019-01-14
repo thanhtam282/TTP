@@ -29,7 +29,7 @@
 			img
 				width: 100%
 				border-radius: r(10px)
-				// height: 100%
+				height: 100%
 		.banner_sub
 			flex: 0 0 40%
 			+media-breakpoint-down(lg)
@@ -48,7 +48,7 @@
 			+media-breakpoint-down(sm)
 				flex: 0 0 50%
 			+media-breakpoint-down(xs)
-				width: r(157px)
+				width: r(155px)
 
 			figure
 				cursor: pointer
@@ -93,12 +93,14 @@
 					flex-direction: column
 					h3
 						font-size: r(14px)
-						font-weight: 500
+						font-weight: 600
 						color: color-get($mau,text-3)
 						padding-top: r(23px)
 						padding-bottom: r(10px)
 						text-align: left
 						width: 100%
+						+media-breakpoint-down(xs)
+							text-align: center
 					p
 						width: 100%
 						font-size: 1rem
@@ -108,6 +110,8 @@
 						display: flex
 						+media-breakpoint-down(sm)
 							text-align: center
+						+media-breakpoint-down(xs)
+							display: block
 						span
 							color: color-get($mau,text-9)
 							margin-left: auto
@@ -169,6 +173,10 @@
 								overflow: hidden
 								span
 									margin-right: 5px
+									font-size: r(14px)
+									+media-breakpoint-down(sm)
+										height: 100%
+										+flex-center()
 								&:hover
 									background: color-get($mau, extra)
 									color: color-get($mau,trang)
@@ -182,18 +190,17 @@
 
 				&:hover
 					text-decoration: none
-					+media-breakpoint-up(lg)
-						&:after
-							top: -50%
-						&:before
-							bottom: -50%
-						figcaption
-							.buy-block
-								height: 100%
-								transition-delay: .4s
-								z-index: 999
-								.btn, .fa
-									padding: .5rem
-									height: r(40px)
+					&:after
+						top: -50%
+					&:before
+						bottom: -50%
+					figcaption
+						.buy-block
+							height: 100%
+							transition-delay: .4s
+							z-index: 9
+							.btn, .fa
+								padding: .5rem
+								height: r(40px)
 
 

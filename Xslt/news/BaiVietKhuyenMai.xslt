@@ -16,25 +16,21 @@
 
 					</div>
 				</div>
-				<div class="row ajaxwrapper">
-					<div class="col-11 mx-auto ">
+				<div class="row ">
+					<div class="col-11 mx-auto ajaxwrapper ">
 						<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
 
 
-						<div class="row">
-							<div class="col">
-								<!-- <a class="btn btn-show-more" href="promotion-detail.html">Xem thêm</a> -->
-
-								<xsl:if test="/NewsList/NextPageUrl!=''">
-									<a class="btn btn-show-more ajaxpagerlink">
-										<xsl:attribute name="href">
-											<xsl:value-of select="/NewsList/NextPageUrl" />
-										</xsl:attribute>
-										<xsl:text>Xem thêm</xsl:text>
-									</a>
-								</xsl:if>
-							</div>
-						</div>
+					</div>
+					<div class="col-11 mx-auto ajaxPagerLinkWrapper">
+						<xsl:if test="/NewsList/NextPageUrl!=''">
+							<a class="btn btn-show-more ajaxpagerlink">
+								<xsl:attribute name="href">
+									<xsl:value-of select="/NewsList/NextPageUrl" />
+								</xsl:attribute>
+								<xsl:text>Xem thêm</xsl:text>
+							</a>
+						</xsl:if>
 					</div>
 				</div>
 			</div>

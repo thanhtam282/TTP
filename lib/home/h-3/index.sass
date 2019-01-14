@@ -25,7 +25,7 @@
 			+media-breakpoint-down(sm)
 				flex: 0 0 50%
 			+media-breakpoint-down(xs)
-				width: r(157px)
+				width: r(155px)
 
 
 			figure
@@ -76,6 +76,8 @@
 						padding-bottom: r(10px)
 						text-align: left
 						width: 100%
+						+media-breakpoint-down(xs)
+							text-align: center
 					p
 						width: 100%
 						font-size: 1rem
@@ -83,6 +85,10 @@
 						font-weight: 500
 						text-align: left
 						display: flex
+						+media-breakpoint-down(sm)
+							text-align: center
+						+media-breakpoint-down(xs)
+							display: block
 						span
 							margin-left: auto
 							color: color-get($mau,text-9)
@@ -170,7 +176,7 @@
 						.buy-block
 							height: 100%
 							transition-delay: .4s
-							z-index: 999
+							z-index: 9
 							.btn, .fa
 								padding: .5rem
 								height: r(40px)

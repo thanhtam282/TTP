@@ -64,6 +64,9 @@
 							padding: 0 1rem 
 							font-size: r(15px)
 							color: color-get($mau,text-3)
+							+media-breakpoint-up(lg)
+
+								text-align: right
 							+media-breakpoint-down(md)
 								margin-top: 1rem
 				&:last-child()
@@ -96,6 +99,11 @@
 			&:last-child()
 				figure
 					flex-direction: row
+					figcaption
+						h3
+							+media-breakpoint-up(lg)
+								text-align: left
+
 .ttp-intro-3
 	margin-bottom: r(70px)
 	+media-breakpoint-down(sm)

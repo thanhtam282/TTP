@@ -312,19 +312,21 @@ function show_more_product() {
 		// $('.ttp-product-detail-3  .wrapper-img figcaption .detail .fullcontent').slideUp()
 		var x = $(this).siblings('.detail').height()
 		if (x > 500) {
-			$(this).siblings('.detail').css('height', x / 2)
+			$(this).siblings('.detail').css('height', x / 4)
 
 		} else {
 
 			$(this).siblings('.detail').toggleClass('active');
-			$(this).hide()
+			$(this).siblings('.detail.active').css('height', 'auto')
+
+			// $(this).hide()
 		}
 
 		$(this).on('click', (function () {
 
 			// $('.ttp-product-detail-3  .wrapper-img figcaption .btn-more ').hide()
 			$(this).siblings('.detail').toggleClass('active');
-			$(this).hide()
+			// $(this).hide()
 		}))
 	})
 }
@@ -491,11 +493,7 @@ function viewedProductAddCart() {
 	})
 }
 
-$('.btn-buy').on('click', function () {
-	$(document).ajaxComplete(function () {
-		$('.cart-toggle').trigger('click')
-	})
-})
+
 
 // END CART Process //
 
@@ -505,7 +503,7 @@ function addClassByLocation() {
 		$('.Module.Module-207 .nav-list .nav-item:nth-child(2) ').addClass('active')
 	} else if (i.search('khuyen-mai') > 0) {
 		$('.Module.Module-207 .nav-list .nav-item:nth-child(3) ').addClass('active')
-		
+
 	} else if (i.search('truyen-thong') > 0) {
 		$('.Module.Module-207 .nav-list .nav-item:nth-child(4) ').addClass('active')
 	} else if (i.search('ho-tro-khach-hang') > 0) {
@@ -532,72 +530,50 @@ function news_photo() {
 	// });
 }
 
-var showmore_button = () => {
-	var arr = document.querySelectorAll('.btn-show-more')
-	
-	var pageurl = document.querySelectorAll('.btn-show-more')[arr.length-1].getAttribute('href')
-	
-	$('body').on('click', '.ttp-promotion-1 .btn-show-more', function () {
-	
-		$.ajax({
-			url: pageurl,
-			data: { isajax: true },
-			dataType: 'html',
-			success: function success(data) {
-				$('.ttp-promotion-1 .container').append($(data).find('.container .ajaxwrapper'));
-				if (pageurl != window.location) {
-					window.history.pushState({ path: pageurl }, '', pageurl);
-				}
-			},
-		})
-	})
 
-}
-var showmore_button_media = () => {
-	var arr = document.querySelectorAll('.btn-show-more')
-	
-	var pageurl = document.querySelectorAll('.btn-show-more')[arr.length-1].getAttribute('href')
-	
-	$('body').on('click', '.ttp-media-3 .btn-show-more', function () {
-	
+var showmore_product = () => {
+	$('body').on('click', '.btn-show-more', function (e) {
+		e.preventDefault()
+		let pageurl = $('.btn-show-more').attr('href');
 		$.ajax({
 			url: pageurl,
-			data: { isajax: true },
-			dataType: 'html',
-			success: function success(data) {
-				$('.ttp-media-3 .container').append($(data).find('.container .ajaxwrapper'));
-				if (pageurl != window.location) {
-					window.history.pushState({ path: pageurl }, '', pageurl);
-				}
+			data: {
+				isajax: true
 			},
-		})
-	})
-
-}
-var showmore_button_media_photo = () => {
-	var arr = document.querySelectorAll('.btn-show-more')
-	
-	var pageurl = document.querySelectorAll('.btn-show-more')[arr.length-1].getAttribute('href')
-	
-	$('body').on('click', 'ttp-media-photo-1 .btn-show-more', function () {
-	
-		$.ajax({
-			url: pageurl,
-			data: { isajax: true },
-			dataType: 'html',
-			success: function success(data) {
-				$('ttp-media-photo-1 .container').append($(data).find('.container .ajaxwrapper'));
-				if (pageurl != window.location) {
-					window.history.pushState({ path: pageurl }, '', pageurl);
-				}
+			type: 'post',
+			success: function (data) {
+				$('.ajaxwrapper').append($(data).find('.ajaxwrapper').html());
+				$('.ajaxPagerLinkWrapper').html($(data).find('.ajaxPagerLinkWrapper').html());
 			},
 		})
 	})
 
 }
 
+
+
+
+
+$('.btn-buy').on('click', function (e) {
+	e.preventDefault();
+	$(document).ajaxComplete(function () {
+		$('.cartpanel').addClass('open')
+	})
+
+})
+
+$('#PaymentAgree').change('input', function () {
+	if ($('#PaymentAgree').is(':checked')) {
+		// console.log(1)
+		$('.cart-button-checkout .btn-next ').show()
+	} else {
+		$('.cart-button-checkout .btn-next ').hide()
+		// console.log(0)
+	}
+})
 ///////// MAIN Control /////
 $(document).ready(function () {
+
 	moveSearch();
 	movehotline();
 	moveCart();
@@ -629,23 +605,9 @@ $(document).ready(function () {
 	plusQuantity();
 	addClassByLocation();
 	news_photo();
-	showmore_button();
-	showmore_button_media();
-	// setTimeout( () => {
+	$('.banner-remove').parents('.owl-item').hide()
 
-		
-	// }, 500);
-	
-	// $("input[name='demo1']").TouchSpin({
-	// 	min: 0,
-	// 	max: 100,
-	// 	// step: 0.1,
-	// 	// decimals: 2,
-	// 	// boostat: 5,
-	// 	maxboostedstep: 10,
-	// 	buttondown_class: "btn btn-default",
-	// 	buttonup_class: "btn btn-default"
-	// 	// postfix: '%'
-	// });
+	showmore_product();
+	// showmore_promotion();
 
 });

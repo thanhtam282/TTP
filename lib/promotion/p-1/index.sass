@@ -2,6 +2,7 @@
 	margin-top: r(100px)
 	margin-bottom: r(150px)
 	+media-breakpoint-down(sm)
+		margin-top: 3rem
 		margin-bottom: 2rem
 	+after-right(home_small_1)
 	&:after
@@ -10,10 +11,13 @@
 		+head-title(text-3)
 		font-size: r(36px)
 		margin-bottom: r(50px)
+		+media-breakpoint-down(sm)
+			margin-bottom: 0
 	.wrapper-banner
 		display: flex
 		flex-wrap: wrap
 	.col-lg-8
+		margin-top: r(30px)
 		.boxzoom
 			border: 1px solid color-get($mau,main)
 			height: 100%
@@ -27,12 +31,21 @@
 		justify-content: space-between
 		+media-breakpoint-up(lg)
 			flex-direction: column
+			margin-top: r(30px)
 		a
 			display: block
 			&:nth-child(2)
 				margin-top: r(30px)
 			+media-breakpoint-down(sm)
-				margin-bottom: 1rem
+				// margin-bottom: 1rem
+			+media-breakpoint-down(md)
+				margin-top: r(30px)
+				width: 100%
+				margin-right: r(15px)
+				&:nth-child(2)
+					margin-right: 0
+					margin-left: r(15px)
+
 
 		.boxzoom
 			border: 1px solid #cccccc
@@ -55,10 +68,21 @@
 
 	.sub
 		.col-lg-4
-			margin-top: r(30px)
+			+media-breakpoint-down(md)
+				margin-top: r(30px)
 			a
+				margin-top: 0
 				height: 100%
+				margin-right: 0
 				.boxzoom
 					height: 100%
+			&:last-child
+				a
+					+media-breakpoint-down(lg)
+						margin-right: 0
+
+	.btn
+		+media-breakpoint-down(lg)
+			margin-top: r(30px)
 	.ajaxwrapper
 		margin-top: r(30px)

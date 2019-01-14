@@ -300,7 +300,8 @@
 		<div class="cart-button-checkout">
 			<a class="btn btn-prev">
 				<xsl:attribute name="href">
-					<xsl:value-of select="/cart"></xsl:value-of>
+					<!-- <xsl:value-of select="/cart"></xsl:value-of> -->
+					<xsl:text>/cart</xsl:text>
 				</xsl:attribute>
 				<span class="mdi mdi-chevron-left"></span>
 				<span>Tiếp tục mua hàng</span>

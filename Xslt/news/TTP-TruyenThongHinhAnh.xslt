@@ -9,7 +9,7 @@
         <section class="ttp-media-photo-1">
             <div class="container">
                 <xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
-               
+
             </div>
         </section>
     </xsl:template>
@@ -75,49 +75,6 @@
             <xsl:text disable-output-escaping="yes">&lt;/div&gt;</xsl:text>
 
         </xsl:if>
-
-        <xsl:if test="position() = 6 ">
-            <xsl:text disable-output-escaping="yes">&lt;/div&gt;</xsl:text>
-            <xsl:text disable-output-escaping="yes">&lt;/div&gt;</xsl:text>
-            <xsl:text disable-output-escaping="yes">&lt;/div&gt;</xsl:text>
-            <xsl:text disable-output-escaping="yes">&lt;section class="ttp-media-photo-2"&gt;</xsl:text>
-            <xsl:text disable-output-escaping="yes">&lt;div class="container"&gt;</xsl:text>
-            <xsl:text disable-output-escaping="yes">&lt;div class="row ajaxwrapper"&gt;</xsl:text>
-
-        </xsl:if>
-        <xsl:if test="position() > 5 ">
-
-            <div class="col-lg-4">
-                <div class="wrapper-gallery">
-
-                    <div class="box-zoom">
-                        <xsl:apply-templates select='NewsImages'></xsl:apply-templates>
-                    </div>
-                </div>
-            </div>
-
-        </xsl:if>
-        <xsl:if test="position() = last() ">
-            <xsl:text disable-output-escaping="yes">&lt;/div&gt;</xsl:text>
-            <xsl:text disable-output-escaping="yes">&lt;div class="row"&gt;</xsl:text>
-
-                        <div class="col">
-               								<xsl:if test="/NewsList/NextPageUrl!=''">
-									<a class="btn btn-show-more ajaxpagerlink">
-										<xsl:attribute name="href">
-											<xsl:value-of select="/NewsList/NextPageUrl" />
-										</xsl:attribute>
-										<xsl:text>Xem thêm</xsl:text>
-									</a>
-								</xsl:if>
-                        </div>
-
-            <xsl:text disable-output-escaping="yes">&lt;/div&gt;</xsl:text>
-            <xsl:text disable-output-escaping="yes">&lt;/div&gt;</xsl:text>
-            <xsl:text disable-output-escaping="yes">&lt;/div&gt;</xsl:text>
-
-        </xsl:if>
-
 
     </xsl:template>
 

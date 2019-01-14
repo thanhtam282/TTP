@@ -1,0 +1,15 @@
+.searchresults
+	.middle-fullwidth
+		margin-top: r(50px)
+		margin-bottom: r(150px)
+		+media-breakpoint-down(md)
+			margin-bottom: 3rem
+	h1
+		+head-title(main)
+		margin-bottom: 1rem
+	.searchcontrols
+		.form-group
+			&:last-child
+				background: color-get($mau, main)
+				input
+					color: color-get($mau,trang)
