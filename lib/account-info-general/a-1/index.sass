@@ -1,0 +1,68 @@
+.ttp-account-general-1
+	margin-top: r(100px)
+	margin-bottom: r(150px)
+	+media-breakpoint-down(sm)
+		margin-bottom: 3rem
+	figure
+		background: #2ab46e3b
+		display: flex
+		border-radius: 5px
+		border: 1px solid color-get($mau,main)
+		padding: 1rem
+		margin-bottom: 2rem
+		img
+			max-height: r(60px)
+		figcaption
+			+flex-center
+			width: 100%
+			text-align: left
+			margin-left: 1rem
+			h4
+				width: 100%
+				font-size: r(13px)
+				font-weight: 600
+				span
+					font-weight: 600
+					display: block
+					text-transform: uppercase
+					color: color-get($mau,main)
+					font-size: r(14px)
+	ul
+		border-right: 2px solid rgba(153,153,153,.5)
+		li
+			a
+				padding-left: 0
+				font-size: r(14px)
+				color: #666666
+				display: block
+				width: 100%
+				transition: .3s all ease-in-out
+				position: relative
+				font-weight: 600
+				&:after
+					position: absolute
+					top: 0
+					right: -2px
+					display: block
+					width: 2px
+					height: 0
+					transform: translateY(-50%)
+					content: ''
+					transition: .3s all ease-in-out
+					opacity: .5
+					top: 50%
+
+				&.active
+					color: color-get($mau,main)
+					&:after
+						background: color-get($mau, main)
+						opacity: 1
+						height: 100%
+
+				&:hover
+					+media-breakpoint-up(lg)
+						color: color-get($mau,main)
+						&:after
+							height: 100%
+							opacity: 1
+							background: color-get($mau, main)

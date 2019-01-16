@@ -120,15 +120,34 @@ html, body
 	// color: color-get($mau,main)
 	font-weight: 400
 	color: color-get($mau,trang)
-	background-image: -moz-linear-gradient( 0deg, rgb(1,66,38) 0%, rgb(104,189,64) 100%)
-	background-image: -webkit-linear-gradient( 0deg, rgb(1,66,38) 0%, rgb(104,189,64) 100%)
-	background-image: -ms-linear-gradient( 0deg, rgb(1,66,38) 0%, rgb(104,189,64) 100%)
+	// background-image: -moz-linear-gradient( 0deg, rgb(1,66,38) 0%, rgb(104,189,64) 100%)
+	// background-image: -webkit-linear-gradient( 0deg, rgb(1,66,38) 0%, rgb(104,189,64) 100%)
+	// background-image: -ms-linear-gradient( 0deg, rgb(1,66,38) 0%, rgb(104,189,64) 100%)
 	margin: 0 auto
 	margin-top: r(30px)
+	position: relative
+	&:after
+		position: absolute
+		border-radius: r(20px)
+		top: 0
+		display: block
+		width: 100%
+		height: 100%
+		content: ''
+		transition: .3s all ease-in-out
+		opacity: 1
+		z-index: -1
+		left: 0
+		background-image: -moz-linear-gradient( 0deg, rgb(1,66,38) 0%, rgb(104,189,64) 100%)
+		background-image: -webkit-linear-gradient( 0deg, rgb(1,66,38) 0%, rgb(104,189,64) 100%)
+		background-image: -ms-linear-gradient( 0deg, rgb(1,66,38) 0%, rgb(104,189,64) 100%)
 	&.active, &:hover
 		background: color-get($mau,trang)
 		color: color-get($mau,main)
 		border: 1px solid color-get($mau,main)
+		font-weight: 500
+		&:after
+			opacity: 0
 =after-img($side)
 	position: relative
 	&:after

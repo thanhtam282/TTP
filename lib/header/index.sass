@@ -146,6 +146,7 @@
 					display: block
 					width: 100%
 					height: 80%
+					z-index: -1
 					content: ''
 					border-left: 1px solid #e1e1e1
 					border-right: 1px solid #e1e1e1
@@ -253,6 +254,8 @@
 						align-items: center
 						+media-breakpoint-up(sm)
 							position: relative
+						&:after
+							cursor: pointer
 						input
 							height: 30px
 							width: 80%
@@ -325,7 +328,7 @@
 				width: 100%
 				max-width: 100%
 				height: calc(100vh - 60px)
-				top: 100%
+				top: r(76px)
 				left: 0
 				transform: translateX(-100%)
 				transform-origin: top left
@@ -333,24 +336,27 @@
 				+media-breakpoint-down(md)
 					// background: color-get($mau, main)
 					background-image: linear-gradient(135deg,#237f50,#00984a 55%,#237f50 85%,#2ab46e)
-					transition: 1s all ease-in-out
+					transition: .5s all ease-in-out
 					display: block
 					// height: auto
 					//+tr(.4)
-					border-top-right-radius: 450px
-					border-top-left-radius: 450px
+					// border-top-right-radius: 450px
+					// border-top-left-radius: 450px
 				//+mainGradRev
 				+media-breakpoint-down(xs)
 					top: r(76px)
-					border-top-right-radius: 0 !important
-					border-top-left-radius: 0 !important
+					// border-top-right-radius: 0 !important
+					// border-top-left-radius: 0 !important
 					transition: .5s all ease-in-out !important
 					// right: 100%
 					
 				&.active
-					border-top-right-radius: 0
-					border-top-left-radius: 0
+					// border-top-right-radius: 0
+					// border-top-left-radius: 0
 					top: 76px
+					animation-delay: .1s
+					transition: .7s all ease-in-out
+
 					transform: translateX(0)
 					// +media-breakpoint-down(xs)
 						// top: r(76px)
@@ -373,7 +379,6 @@
 							color: white
 							font-size: r(18px)
 							font-weight: 500
-							color: white
 							display: block
 						&.active
 							.nav-link
@@ -383,27 +388,29 @@
 		background: color-rgba(color-get($mau,den),.8)
 		// display: none
 		height: calc(100vh - 60px)
-		top: 100%
+		top: 79px
 		position: fixed
-		border-bottom-right-radius: 450px
-		border-top-right-radius: 450px
-		transition: .5s all ease-out
+		// border-bottom-right-radius: 450px
+		// border-top-right-radius: 450px
 		display: block
 		right: 100%
-		transition-delay: .2s
+		transition: .5s all ease-out
+
 		+media-breakpoint-down(md)
 			width: 100%
 		+media-breakpoint-down(xs)
 			top: r(79px)
-			border-bottom-right-radius: 0
-			border-top-right-radius: 0
+			// border-bottom-right-radius: 0
+			// border-top-right-radius: 0
 			transition: 0s all ease-in-out
 			display: none
 		&.active
-			border-bottom-right-radius: 0
-			border-top-right-radius: 0
+			// border-bottom-right-radius: 0
+			// border-top-right-radius: 0
 			top: 79px
-			transition-delay: .1s
+			// transition-delay: .1s
+			transition: .4s all ease-out
+
 			right: 0
 			+media-breakpoint-down(xs)
 				transition: .5s all ease-out
