@@ -16,7 +16,9 @@
 		+head-title(text-3)
 		+media-breakpoint-down(md)
 			padding-bottom: 1rem
-		
+	p
+		text-align: justify
+		padding-right: 5px
 	.title
 		margin-bottom: r(30px)
 		color: color-get($mau,extra)
@@ -43,6 +45,16 @@
 
 			flex: 0 0 50%
 			padding-right: 2rem
+			.detail
+				max-height: r(300px)
+				overflow-y: auto
+				&::-webkit-scrollbar
+					width: r(8px)
+					padding-right: 1rem
+				&::-webkit-scrollbar-thumb
+					border-radius: 4px
+					padding-right: 1rem
+					background: color-get($mau, main)
 			+media-breakpoint-down(lg)
 				padding-right: 0
 				+flex-center()

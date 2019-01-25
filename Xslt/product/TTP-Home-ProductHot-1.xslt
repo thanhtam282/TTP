@@ -9,7 +9,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<div class="title">
+						<div class="title" data-aos="fade-down">
 							<h2>
 								<xsl:value-of select="/ProductList/ModuleTitle"></xsl:value-of>
 
@@ -34,11 +34,11 @@
 	<xsl:template match="Product">
 		<xsl:choose>
 			<xsl:when test="floor(ShowOption div 4) mod 2 = 1">
-				<div class="banner">
+				<div class="banner" data-aos="fade-down" data-aos-duration="1000">
 					<a>
 						<xsl:attribute name="href">
 							<!-- <xsl:value-of select="Url"></xsl:value-of> -->
-							<xsl:value-of select="BriefContent" ></xsl:value-of>
+							<xsl:value-of select="BriefContent"></xsl:value-of>
 							<!-- <xsl:value-of select="OldPrice"></xsl:value-of> -->
 
 						</xsl:attribute>
@@ -61,7 +61,10 @@
 			</xsl:when>
 
 			<xsl:otherwise>
-				<div class="product">
+				<div class="product" data-aos="fade-down" data-aos-duration="1000">
+					<xsl:attribute name='data-aos-delay'>
+						<xsl:value-of select='position()*150 - 150'></xsl:value-of>
+					</xsl:attribute>
 					<figure>
 						<div class="boxzoom">
 							<img class="img-fluid">
@@ -87,14 +90,17 @@
 
 								</span>
 							</p>
-							<p class="new">
-								<xsl:text>-</xsl:text>
-								<xsl:call-template name="get-discount-percentage">
-									<xsl:with-param name="param-currentPrice" select="Price" />
-									<xsl:with-param name="param-oldPrice" select="OldPrice" />
-								</xsl:call-template>
-								<xsl-text>%</xsl-text>
-							</p>
+							<xsl:if test="OldPrice != ''">
+
+								<p class="new">
+									<xsl:text>-</xsl:text>
+									<xsl:call-template name="get-discount-percentage">
+										<xsl:with-param name="param-currentPrice" select="Price" />
+										<xsl:with-param name="param-oldPrice" select="OldPrice" />
+									</xsl:call-template>
+									<xsl-text>%</xsl-text>
+								</p>
+							</xsl:if>
 							<xsl:choose>
 								<xsl:when test="floor(ShowOption div 1) mod 2 = 1">
 									<p class="stt">
@@ -104,7 +110,7 @@
 
 							</xsl:choose>
 							<div class="buy-block">
-								<a href="#!"  class="btn-buy" onclick="AjaxCart.addproducttocart_catalog(this);return false;">
+								<a href="#!" class="btn-buy" onclick="AjaxCart.addproducttocart_catalog(this);return false;">
 									<xsl:attribute name="data-productid">
 										<xsl:value-of select="ProductId"></xsl:value-of>
 									</xsl:attribute>

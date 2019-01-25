@@ -1,0 +1,87 @@
+.ttp-product-1
+	+after-img(home_small_1)
+	&:after
+		top: -160%
+	ul
+		flex-wrap: wrap
+		margin: 0 -5px
+		li
+			margin-top: 10px
+			flex: 0 0 25%
+			padding: 0 5px
+			+ li
+				margin-left: 0 
+
+.ttp-product-1, .ttp-media-1
+	margin-top: r(100px)
+	+media-breakpoint-down(md)
+		margin-top: 3rem
+	h2
+		+head-title(text-3)
+		margin-top: r(24px)
+	ul
+		+flex-center()
+		margin-bottom: r(70px)
+		margin-top: r(25px)
+		+media-breakpoint-down(md)
+			margin: r(25px) 0
+		li
+			+media-breakpoint-down(sm)
+				width: 100%
+			+ li
+				// margin-left: r(20px)
+				+media-breakpoint-down(sm)
+					margin: 0
+					margin-top: 2px
+			a
+				padding: r(6px) r(56px)
+				border-radius: r(20px)
+				box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1)
+				transition: .3s all ease-in-out
+				+flex-center()
+				font-size: r(18px)
+				color: color-get($mau,main)
+				font-weight: 400
+				position: relative
+				&:after
+					position: absolute
+					border-radius: r(20px)
+					top: 0
+					display: block
+					width: 100%
+					height: 100%
+					content: ''
+					transition: .3s all ease-in-out
+					opacity: 0
+					left: 0
+					z-index: -1
+					background-image: -moz-linear-gradient( 0deg, rgb(1,66,38) 0%, rgb(104,189,64) 100%)
+					background-image: -webkit-linear-gradient( 0deg, rgb(1,66,38) 0%, rgb(104,189,64) 100%)
+					background-image: -ms-linear-gradient( 0deg, rgb(1,66,38) 0%, rgb(104,189,64) 100%)
+				&:hover
+					+media-breakpoint-up(lg)
+						color: color-get($mau,trang)
+						&:after
+							opacity: 1
+				&.active
+					color: color-get($mau,trang)
+					background-image: -moz-linear-gradient( 0deg, rgb(1,66,38) 0%, rgb(104,189,64) 100%)
+					background-image: -webkit-linear-gradient( 0deg, rgb(1,66,38) 0%, rgb(104,189,64) 100%)
+					background-image: -ms-linear-gradient( 0deg, rgb(1,66,38) 0%, rgb(104,189,64) 100%)
+.ttp-media-1
+	position: relative
+	&:after
+		position: absolute
+		top: -122%
+		z-index: 8
+		right: 0
+		display: block
+		// width: 100%
+		// height: 100%
+		content: url('../img/home/home_small_1.png')
+		+media-breakpoint-down(lg)
+			right: -3%
+			top: -125%
+			transform: scale(.8)
+		+media-breakpoint-down(md)
+			display: none

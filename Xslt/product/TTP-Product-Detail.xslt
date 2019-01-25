@@ -271,6 +271,8 @@
 
 									</span>
 								</p>
+							<xsl:if test="OldPrice != ''">
+							
 								<p class="new">
 									<xsl:text>-</xsl:text>
 									<xsl:call-template name="get-discount-percentage">
@@ -279,6 +281,7 @@
 									</xsl:call-template>
 									<xsl-text>%</xsl-text>
 								</p>
+							</xsl:if>
 								<div class="buy-block"><a href="#">
 										<div class="btn btn-put"> <span class="fas fa-shopping-cart"></span>Cho vào giỏ hàng</div>
 									</a>

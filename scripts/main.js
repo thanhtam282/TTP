@@ -172,6 +172,45 @@ function slider_banner_sub() {
 ////// END OF GLOBAL ////////
 
 
+var slider_footer2 = () => {
+	if ($('.ttp-footer-2 .list-items').length) {
+		$(".ttp-footer-2 .list-items").slick({
+			autoplay: true,
+			// slickPlay: true,
+			// slickPause: true,
+			autoplaySpeed: 4000,
+			dots: false,
+			infinite: true,
+			speed: 300,
+			arrows: true,
+			slidesToShow: 5,
+			slidesToScroll: 1,
+			responsive: [{
+					breakpoint: 1024,
+					settings: {
+						slidesToShow: 4,
+					}
+				},
+				{
+					breakpoint: 767,
+					settings: {
+						slidesToShow: 3,
+					}
+				},
+				{
+					breakpoint: 480,
+					settings: {
+						slidesToShow: 2,
+					}
+				}
+				// You can unslick at a given breakpoint now by adding:
+				// settings: "unslick"
+				// instead of a settings object
+			]
+		});
+	}
+
+};
 var slider_footer = () => {
 	if ($('.ttp-footer-1 .list-items').length) {
 		$(".ttp-footer-1 .list-items").slick({
@@ -571,9 +610,31 @@ $('#PaymentAgree').change('input', function () {
 		// console.log(0)
 	}
 })
+
+let nav = {
+
+	mainNav: () => {
+		let nav_toggle = $('.ttp-product-1 .nav-toggle ')
+		let nav = $('.ttp-product-1 nav ')
+		let li = $('.ttp-product-1 nav li')
+		nav_toggle.on('click', function () {
+			nav_toggle.toggleClass('active')
+			nav.toggleClass('active');
+		})
+		// li.on('click', function () {
+		// 	nav.removeClass('active');
+		// })
+	},
+
+	navInit: () => {
+		nav.mainNav();
+	}
+}
+
+
 ///////// MAIN Control /////
 $(document).ready(function () {
-
+	
 	moveSearch();
 	movehotline();
 	moveCart();
@@ -587,7 +648,8 @@ $(document).ready(function () {
 	slider_banner_sub()
 	slider_banner()
 	slider_footer()
-
+	slider_footer2()
+		
 	Gallerydetail()
 	ProductDetailShop1();
 	show_more_product();
@@ -608,6 +670,21 @@ $(document).ready(function () {
 	$('.banner-remove').parents('.owl-item').hide()
 
 	showmore_product();
+	nav.navInit();
+	if ($(window).width() < 992 ){
+		AOS.init({
+			disable: true
+		})
+		
+	} else {
+		AOS.init({
+			duration: 1500,
+	
+			disable: false
+		})
+		
+	}
+
 	// showmore_promotion();
 
 });

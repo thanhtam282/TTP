@@ -22,7 +22,7 @@
 									<xsl:text>Xem thêm</xsl:text>
 								</a>
 							</xsl:if>
-			
+
 						</div>
 
 					</div>
@@ -113,14 +113,18 @@
 
 								</span>
 							</p>
-							<p class="new">
-								<xsl:text>-</xsl:text>
-								<xsl:call-template name="get-discount-percentage">
-									<xsl:with-param name="param-currentPrice" select="Price" />
-									<xsl:with-param name="param-oldPrice" select="OldPrice" />
-								</xsl:call-template>
-								<xsl-text>%</xsl-text>
-							</p>
+							<xsl:if test="OldPrice != ''">
+							
+								<p class="new">
+									<xsl:text>-</xsl:text>
+									<xsl:call-template name="get-discount-percentage">
+										<xsl:with-param name="param-currentPrice" select="Price" />
+										<xsl:with-param name="param-oldPrice" select="OldPrice" />
+									</xsl:call-template>
+									<xsl-text>%</xsl-text>
+								</p>
+							</xsl:if>
+
 							<xsl:choose>
 								<xsl:when test="floor(ShowOption div 1) mod 2 = 1">
 									<p class="stt">

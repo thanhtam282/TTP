@@ -8,7 +8,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col">
-						<h2>
+						<h2 data-aos="fade-up">
 							<xsl:value-of select="/NewsList/ModuleTitle"></xsl:value-of>
 						</h2>
 
@@ -26,7 +26,10 @@
 
 	<xsl:template match="News">
 
-		<div class="col-lg-4 col-md-6">
+		<div class="col-lg-4 col-md-6" data-aos="flip-up" data-aos-duration="1000">
+					<xsl:attribute name='data-aos-delay'>
+						<xsl:value-of select='position()*200 - 200'></xsl:value-of>
+					</xsl:attribute>
 			<div class="wrapper">
 				<a>
 					<xsl:attribute name='href'>

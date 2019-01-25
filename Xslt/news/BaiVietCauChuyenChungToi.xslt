@@ -16,7 +16,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col">
-							<h1>
+							<h1 data-aos="fade-down">
 								<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 
 							</h1>
@@ -59,7 +59,7 @@
 		<div class="row">
 			<div class="col">
 				<figure>
-					<img>
+					<img data-aos="fade-left">
 					<xsl:attribute name='src'>
 						<xsl:value-of select='ImageUrl'></xsl:value-of>
 					</xsl:attribute>
@@ -67,12 +67,14 @@
 						<xsl:value-of select='Title'></xsl:value-of>
 					</xsl:attribute>
 					</img>
-					<figcaption class="quote">
-						<h2 class="title">
+					<figcaption class="quote" data-aos="fade-right">
+						<h2 class="title" >
 							<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 
 						</h2>
-						<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
+						<div class="detail">
+							<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
+						</div>
 					</figcaption>
 				</figure>
 			</div>
@@ -82,7 +84,7 @@
 	<xsl:template match="News" mode="ZoneNews2">
 		<div class="row">
 			<div class="col-md-4">
-				<img class="img-fluid">
+				<img class="img-fluid" data-aos="fade-right">
 				<xsl:attribute name='src'>
 					<xsl:value-of select='ImageUrl'></xsl:value-of>
 				</xsl:attribute>
@@ -93,7 +95,7 @@
 			</div>
 			<div class="col-md-8">
 				<div class="quote">
-					<div class="sub">
+					<div class="sub" data-aos="fade-up">
 						<xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of>
 
 					</div>
@@ -105,8 +107,8 @@
 	<xsl:template match="News" mode="ZoneNews3">
 		<div class="row">
 			<div class="col-12">
-				<div class="quote">
-					<h3>
+				<div class="quote" data-aos="fade-down">
+					<h3 >
 						<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 
 					</h3>

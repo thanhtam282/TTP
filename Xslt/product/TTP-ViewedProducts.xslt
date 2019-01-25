@@ -49,14 +49,17 @@
 
 							</span>
 						</p>
-					<p class="new">
-						<xsl:text>-</xsl:text>
-						<xsl:call-template name="get-discount-percentage">
-							<xsl:with-param name="param-currentPrice" select="Price" />
-							<xsl:with-param name="param-oldPrice" select="OldPrice" />
-						</xsl:call-template>
-						<xsl-text>%</xsl-text>
-					</p>
+							<xsl:if test="OldPrice != ''">
+							
+								<p class="new">
+									<xsl:text>-</xsl:text>
+									<xsl:call-template name="get-discount-percentage">
+										<xsl:with-param name="param-currentPrice" select="Price" />
+										<xsl:with-param name="param-oldPrice" select="OldPrice" />
+									</xsl:call-template>
+									<xsl-text>%</xsl-text>
+								</p>
+							</xsl:if>
 						<div class="buy-block">
 						<a href="javascript:void(0)" onclick="AjaxCart.addproducttocart_catalog(this);return false;">
 						<xsl:attribute name="data-productid">
