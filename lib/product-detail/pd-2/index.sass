@@ -106,7 +106,151 @@
 			text-align: justify
 			+fz(r(15px))
 			line-height: r(23px)
+	.review
+		h3
+			display: flex
+			color: color-get($mau,main)
+			line-height: r(45px)
+			font-weight: 500
+			flex-direction: column
+			font-size: 1.5rem
+			+media-breakpoint-up(lg)
+				font-size: r(30px)
+				flex-direction: row
+				justify-content: space-between
+			a
+				height: r(50px)
+				text-transform: uppercase
+				font-size: r(15px)
+				border-radius: 0
+				padding: 0 1rem 
+				min-width: r(200px)
+				line-height: r(50px)
+				box-shadow: 0px 0px 0px 2px color-get($mau,main) inset
+				color: color-get($mau,main)
+				+media-breakpoint-down(md)
+					margin-top: .5rem
+					line-height: r(40px)
+					height: r(40px)
+					background: color-get($mau, main)
+					color: color-get($mau,trang)
+				&:hover
+					+media-breakpoint-up(lg)
+						color: color-get($mau,trang)
+						background: color-get($mau, main)
+		.commentpanel
+			margin: 0 r(-20px)
+			+media-breakpoint-up(lg)
+				padding: 0 r(30px)
+			.journalTools
+				margin-top: r(60px)
+				.journalEditor
+					.journalInfo, .block
+						display: flex
+						justify-content: space-between
+						.form_group
+							padding: 0 r(20px)
+							width: 100%
+							label
+								text-transform: uppercase
+								color: color-get($mau,text-6)
+								font-size: r(13px)
+								display: block
+							input
+								width: 100%
+								height: r(35px)
+								padding: .5rem
+								font-size: r(14px)
+								&::-webkit-input-placeholder
+									font-size: r(14px)
+					.block
+						flex-direction: column
+						justify-content: initial
+						margin-top: 1.2rem
+						textarea
+							width: 100%
+							height: r(120px)
+							border: 1px solid #b7b7b7
+							padding: .5rem
+							font-size: r(14px)
+							&::-webkit-input-placeholder
+								font-size: r(14px)
 
+						.btnShare
+							color: #0d1d42
+							box-shadow: 0px 0px 0px 2px color-get($mau,main) inset
+							height: r(50px)
+							margin: 0 auto
+							font-weight: 500
+							+flex-center
+							margin-top: r(30px)
+							line-height: r(50px)
+							min-width: r(190px)
+							border-radius: 0
+							transition: .3s all ease-in-out
+							&:hover
+								+media-breakpoint-up(lg)
+									background: color-get($mau, main)
+									color: color-get($mau,trang)
+
+					.journalPlaceholder
+						display: none
+			.journalItems
+				margin-top: r(30px)
+				padding: 0 r(20px)
+				+media-breakpoint-up(lg)
+					margin-top: r(88px)
+				.journalrow
+					display: flex
+					padding: 1rem 0
+					border-top: 1px solid #e1e1e1
+					+media-breakpoint-up(lg)
+						padding: 3rem 0
+					&:last-child
+						border-bottom: 1px solid #e1e1e1
+					.author
+						i 
+							display: inline-block
+							background: url(../img/icon_comment.png) no-repeat
+							background-size: cover
+							+wh(40px)
+							+media-breakpoint-up(lg)
+								width: 80px
+								height: 80px
+					.journalitem
+						display: flex
+						justify-content: space-between
+						width: 100%
+						position: relative
+						.journalsummary
+							margin-right: auto
+							padding-left: 1rem
+							+media-breakpoint-up(lg)
+								padding-left: r(27px)
+							color: color-get($mau,text-3)
+							strong
+								font-size: r(18px)
+								display: inline-block
+								margin-bottom: r(20px)
+								+media-breakpoint-up(lg)
+									margin-bottom: r(40px)
+							b
+								padding-left: 1rem
+							div
+								font-size: r(14px)
+								text-align: justify
+						.journalfooter
+							position: absolute
+							right: 0
+							a
+								display: none
+							abbr
+								color: color-get($mau,text-9)
+								font-size: r(14px)
+								cursor: auto
+								text-decoration: none
+					.jcmt
+						display: none
 	.btn-more
 		margin: 0 auto
 		+flex-center()

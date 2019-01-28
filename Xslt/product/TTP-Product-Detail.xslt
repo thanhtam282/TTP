@@ -134,9 +134,9 @@
 								</div><a class="btn btn-more" href="javascript:void(0)"><span class="fas fa-chevron-down"></span></a>
 							</div>
 							<div class="tab-pane fade" id="tab-2">
-								<div class="detail">
-									<xsl:value-of select="/ProductDetail/FullContent" disable-output-escaping="yes"></xsl:value-of>
-
+								<div class="review">
+								<h3>Khách hàng nhận xét<a class="btn btn-review" href="#!">viết đánh giá</a>
+										</h3>
 								</div>
 							</div>
 						</div>

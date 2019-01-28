@@ -632,6 +632,7 @@ let nav = {
 }
 
 
+
 ///////// MAIN Control /////
 $(document).ready(function () {
 	
@@ -651,6 +652,11 @@ $(document).ready(function () {
 	slider_footer2()
 		
 	Gallerydetail()
+	$('.product-detail-page .commentpanel').insertAfter('.ttp-product-detail-3 #tab-2 .review h3')
+	$('.ttp-product-detail-3  .journalTools').slideUp()
+	$('.ttp-product-detail-3 .review  .btn-review ').on('click', function () {
+		$('.ttp-product-detail-3  .journalTools').slideToggle()
+	})
 	ProductDetailShop1();
 	show_more_product();
 	quantity_product_detail();

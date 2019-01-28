@@ -192,8 +192,11 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
                         <div class="col-12">
                             <div class="bot-wrapper">
                                 <div class="copyright">
-                                    <h4>Copyright © 2018 TTP Corporation. Designed by Cánh Cam</h4>
-
+                                    <h4>Copyright © 2018 TTP Corporation. Designed by
+                                        <a href="http://canhcam.vn" style="color: white; opacity: .6">
+                                            Cánh Cam
+                                        </a>
+                                    </h4>
                                 </div>
                             </div>
                         </div>
@@ -245,6 +248,7 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
     <script src="/Data/Sites/1/skins/default/js/core.min.js?v=1.0.0"></script>
     <script src="/Data/Sites/1/skins/default/js/main.min.js?v=1.0.0"></script>
 	<script src="/Data/Sites/1/skins/default/js/ecommerce.js?v=1.0.0" type="text/javascript"></script>
+	<script src="/Data/Sites/1/skins/default/js/comment.js" type="text/javascript"></script>
 
     <!-- <script src="/Data/Sites/1/skins/default/js/plugins.js?v=1.0.0"></script> -->
     <!-- <script src="/Data/Sites/1/skins/default/js/app.js?v=1.0.0"></script> -->

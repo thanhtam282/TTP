@@ -15,7 +15,7 @@ section.ttp-product-detail-3
 		.row
 			.col
 				#myTabContent.tab-content
-					#tab-1.tab-pane.fade.show.active
+					#tab-1.tab-pane.fade
 						.detail
 							p Công Dụng Bất Ngờ Hỗ Trợ Sức Khỏe Đến Từ Tinh Dầu Hoa Hồng
 							p Hoa hồng vốn được mệnh danh là nữ hoàng của các loài hoa vì không bởi vẻ đẹp mà còn vì hương thơm đặc trưng, sang trọng. Tinh dầu hoa hồng được chiết xuất từ những gì tinh túy nhất của loài hoa này không những vẫn giữ được trọn vẹn mùi hương quyến rũ mà còn có thể đem đến những lợi ích tuyệt vời cho sức khỏe, và hỗ trợ chăm sóc sắc đẹp vô cùng hiệu quả.
@@ -54,20 +54,58 @@ section.ttp-product-detail-3
 						a(href="javascript:void(0)").btn.btn-more
 							span.fas.fa-chevron-down
 
-					#tab-2.tab-pane.fade
-						.detail
-							p 2. “Top 100 thương hiệu Việt uy tín do người tiêu dùng bình chọn vào tháng 8 năm 2018” là lời khẳng định vững chắc nhất, về uy tín và chất lượng của trong từng sản phẩm.
-							p 3. Tinh dầu hoa hồng PhuongNam được chưng cất theo quy trình chuẩn quốc tế. Nguyên liệu tinh dầu hoa hồng PhuongNam được lấy từ các nông trại 100% hữu cơ đem lại những giọt tinh dầu thiên nhiên nhất. 
-							p Tinh dầu PhuongNam luôn nghiêm ngặt về chất lượng tinh dầu từ nguyên liệu nhập đến khâu sản xuất thành phẩm. Và công ty sẽ đền bù cho bạn gấp 5 LẦN nếu bạn phát hiện tinh dầu kém chất lượng.
-							p Tinh dầu hoa hồng
-							p Hướng Dẫn Sử Dụng
-							p Đối với xông tinh dầu bằng các máy khuyếch tán hay đèn xông: bạn nhỏ 3-5 giọt tinh dầu vào tuỳ thuộc diện tích phòng. 
-							p VIDEO GIỚI THIỆU TỔNG QUAN VỀ PHUONGNAM ESSENTIAL OIL
-							p Lưu ý:
-							p - Sản phẩm không phải là thuốc, không có tác dụng diều trị bệnh và không có tác dụng phụ. Cần tham khảo ý kiến bác sĩ nếu dùng mục đích điều trị bệnh và phụ nữ đang mang thai.
-							p - Tránh xa tầm tay trẻ em.
-							p - Bảo quản nơi khô mát, không được để trực tiếp ánh nắng mặt trời.
-							p - Không được uống trực tiếp, không được cho vào mắt hoặc gần mắt.
+					#tab-2.tab-pane.fade.show.active
+						.review
+							h3 Khách hàng nhận xét
+								a(href="#!").btn.btn-review viết đánh giá
+							#ctl00_mainContent_ctl03_ctl00_comment_pnlFeedback.commentpanel.commentpanel0(data-type="0")
+								.journalTools
+									.journalEditor
+										.journalInfo
+											.form_group
+												label Mời bạn nhập tên
+												input.txtFullName( type="text")
+											.form_group
+												label Mời bạn nhập email
+												input.txtEmail( type="text")
+										.block
+											.journalClose
+											.form_group
+												label Mời bạn
+												textarea.journalContent
+											a.btn.btnShare(href="#") Gửi
+										.journalPlaceholder Mời bạn thảo luận hoặc đánh giá về sản phẩm này
+								.clear
+								.journalItems
+									#jid-8.journalrow
+										.author
+											i.iconcom
+										.journalitem
+											.minidel(onclick="journalDelete(this);")
+											.journalsummary
+												strong
+													| Admin
+												b.mod Quản trị viên
+												div
+													| teste
+											.journalfooter
+												a#cmtbtn-8.cmreply(href="#") Trả lời
+												a#like-8.cmlike(href="#")
+													| Thích
+													i.iconcom-likecomm
+													span 0
+												abbr(title="25/01/2019 10:06 SA")
+													| 7 phút trước
+										ul#jcmt-8.jcmt
+											li#jcmt-8-txtrow.cmteditarea
+												textarea#jcmt-8-txt.cmteditor
+												.editorPlaceholder Mời bạn thảo luận hoặc đánh giá về sản phẩm này
+											li.cmtbtn
+												.cmtinfo
+													input.cmtname(type="text" placeholder="Mời bạn nhập tên (Bắt buộc)" maxlength="100")
+													input.cmtemail(type="text" placeholder="Mời bạn nhập email (Không bắt buộc)" maxlength="100")
+													a(href="#") Gửi bình luận
+
 
 
 

@@ -31,6 +31,7 @@
     ShowProductCode="true"
     ShowSubTitle="true"
     ShowRelatedProduct="true"
+    ShowComments="true"
 	/>
 <portal:SharedFilesDisplaySettings runat="server" 
 	ShowFolder="false"
