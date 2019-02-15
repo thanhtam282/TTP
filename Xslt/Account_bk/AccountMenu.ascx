@@ -20,7 +20,7 @@
             <asp:Literal ID="litUserProfile" runat="server" />
             <asp:Literal ID="litAddress" runat="server" />
 		    <asp:Literal ID="litPurchaseHistory" runat="server" />
-            <asp:Literal ID="litWishlist" runat="server" />
+            <!-- <asp:Literal ID="litWishlist" runat="server" /> -->
 		    <asp:Literal ID="litChangePassword" runat="server" />
         </ul>
     </nav>

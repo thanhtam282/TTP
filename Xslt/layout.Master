@@ -39,9 +39,10 @@ Facebook: https://fb.com/canhcam.vn
     <link rel="icon" type="image/png" sizes="96x96" href="/Data/Sites/1/skins/default/favicon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/Data/Sites/1/skins/default/favicon/favicon-16x16.png">
     <link rel="manifest" href="/Data/Sites/1/skins/default/favicon/manifest.json">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&amp;subset=vietnamese" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&amp;subset=vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
@@ -107,8 +108,24 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
                                     <!-- <div class="cart-toggle">
                                         <div class="icon"><span class="fas fa-shopping-cart"></span><span class="amount">3</span></div>
                                     </div> -->
-									<portal:ModuleWrapper ID='mdl257' runat='server' ConfigureModuleId='257' />
+                                    <portal:ModuleWrapper ID='mdl257' runat='server' ConfigureModuleId='257' />
 
+                                </div>
+                                <div class="user">
+                                    <div class="user-toggle"><span class="fas fa-user"></span></div>
+                                    <div class=" logined active">
+                                        <portal:welcomemessage id="WelcomeMessage" runat="server" wrapinprofilelink="true"
+                                        profilelink="~/Account/UserProfile.aspx" RenderAsListItem="true"
+                                        listitemcss="firstnav" />
+                                        <portal:LogoutLink ID="LogoutLink" runat="server" RenderAsListItem="true" />
+                                    </div>
+                                    <div class="user-panel">
+                                        <ul>
+                                            <portal:LoginLink ID="LoginLink" runat="server" RenderAsListItem="true" />
+                                            <portal:RegisterLink ID="RegisterLink" runat="server" RenderAsListItem="true" />
+
+                                        </ul>
+                                    </div>
                                 </div>
                                 <portal:ModuleWrapper ID="mdl210" runat="server" ConfigureModuleId="210" />
 
@@ -146,7 +163,7 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
                     <div class="row">
                         <div class="col">
                             <div class="ttp-slider-1">
-                                    <portal:ModuleWrapper ID="mdl219" runat="server" ConfigureModuleId="219" />
+                                <portal:ModuleWrapper ID="mdl219" runat="server" ConfigureModuleId="219" />
 
                             </div>
                         </div>
@@ -178,14 +195,14 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
                             <div class="link">
 
                                 <portal:ModuleWrapper ID="mdl216" runat="server" ConfigureModuleId="216" />
-                                
+
                                 <div class="form-group">
-                                        <portal:ModuleWrapper ID="mdl218" runat="server" ConfigureModuleId="218" />
+                                    <portal:ModuleWrapper ID="mdl218" runat="server" ConfigureModuleId="218" />
                                     <!-- <input type="text" placeholder="Nhập email"><a href="#"><span class="fas fa-check"></span></a> -->
                                 </div>
                                 <div class="social-wrapper">
-                                        <portal:ModuleWrapper ID="mdl217" runat="server" ConfigureModuleId="217" />
-                
+                                    <portal:ModuleWrapper ID="mdl217" runat="server" ConfigureModuleId="217" />
+
                                 </div>
                             </div>
                         </div>
@@ -247,8 +264,8 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
     <!-- ////////////// Javascript Include ////////////// -->
     <script src="/Data/Sites/1/skins/default/js/core.min.js?v=1.0.0"></script>
     <script src="/Data/Sites/1/skins/default/js/main.min.js?v=1.0.0"></script>
-	<script src="/Data/Sites/1/skins/default/js/ecommerce.js?v=1.0.0" type="text/javascript"></script>
-	<script src="/Data/Sites/1/skins/default/js/comment.js" type="text/javascript"></script>
+    <script src="/Data/Sites/1/skins/default/js/ecommerce.js?v=1.0.0" type="text/javascript"></script>
+    <script src="/Data/Sites/1/skins/default/js/comment.js" type="text/javascript"></script>
 
     <!-- <script src="/Data/Sites/1/skins/default/js/plugins.js?v=1.0.0"></script> -->
     <!-- <script src="/Data/Sites/1/skins/default/js/app.js?v=1.0.0"></script> -->

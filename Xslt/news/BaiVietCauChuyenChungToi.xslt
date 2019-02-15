@@ -50,10 +50,6 @@
 	</xsl:template>
 	<!--End match content-->
 
-
-
-
-
 	<!--Begin match ZoneNews-->
 	<xsl:template match="News" mode="ZoneNews1">
 		<div class="row">

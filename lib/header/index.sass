@@ -383,6 +383,78 @@
 						&.active
 							.nav-link
 								border-bottom: 1px solid color-get($mau,trang)
+				.user
+					a
+						&:hover
+							text-decoration: none
+					.logined.deactive
+						display: none !important
+
+					@media (max-width: 991.98px)
+						// display: none
+						.logined
+							&.active
+								display: flex
+								padding: .5rem 1.5rem
+								width: 100%
+								margin: 0
+								justify-content: space-between
+								li
+									a
+										color: color-get($mau,trang)
+										font-size: 18px
+										&:hover
+											color: color-get($mau,trang)
+						.logined.active ~ .user-panel 
+							padding: 0
+						.logined.active ~ .user-panel ul
+							display: none
+					.user-toggle
+						.fas
+							color: #999
+						@media (max-width: 991.98px)
+							display: none
+
+
+					.user-panel
+						padding: 1rem
+						width: 100%
+						ul
+							display: flex
+							list-style-type: none
+							justify-content: center
+							margin-bottom: 0
+							border-bottom: 1px dashed white
+							padding: 1rem 0
+							li
+								max-width: 50%
+								flex: 0 0 50%
+								position: relative
+								a
+									display: flex
+									flex-direction: column
+									align-items: center
+									color: white
+								&:first-child
+									a,span
+										&:before
+											margin-bottom: .5rem
+											+fontawesome('\f303', $faf)
+											color: white
+											font-size: r(24px)
+									span
+										display: flex
+										flex-direction: column
+										align-items: center
+										color: white
+								&:last-child
+									border-left: 1px solid white
+									a
+										&:before
+											margin-bottom: .5rem
+											+fontawesome('\f2f6', $faf)
+											color: white
+											font-size: r(24px)
 	.backdrop
 		cursor: pointer
 		background: color-rgba(color-get($mau,den),.8)
@@ -502,7 +574,83 @@
 									
 								button
 									top: 0
+						.user
+							+borderHeader
+							display: flex
+							&:before
+								background: #e1e1e1
+							padding: 0 10px
+							cursor: pointer
+							.logined.deactive
+								display: none !important
+							.logined.active
+								display: flex
+								list-style: none
+								margin: 0 -10px
+								margin-left: .5rem
+								li
+									a
+										color: color-get($mau,main)
+								li:first-child
+									+ li
+										padding: 0 10px
+							.user-toggle
+								.fas
+									color: #999
 
+							.user-panel
+								display: none
+								position: absolute
+								top: 20px
+								width: 280px
+								right: 0
+								+grad2
+								z-index: 20
+								ul
+									display: flex
+									list-style-type: none
+									justify-content: center
+									margin-bottom: 0
+									padding: 0
+									li
+										max-width: 50%
+										flex: 0 0 50%
+										position: relative
+										a, span
+											display: flex
+											flex-direction: column
+											align-items: center
+											color: white
+											padding: .5rem
+											height: 100%
+											&:hover
+												text-decoration: none
+										&:first-child
+											a,span
+												&:before
+													// margin-bottom: .5rem
+													margin-right: .6rem
+													+fontawesome('\f303', $faf)
+													color: white
+													font-size: r(24px)
+											span
+												// margin-top: .55rem
+												// display: flex
+												// flex-direction: column
+												// align-items: center
+												// color: white
+										&:last-child
+											border-left: 1px solid white
+											a
+												&:before
+													// margin-bottom: .5rem
+													margin-right: .6rem
+													+fontawesome('\f2f6', $faf)
+													color: white
+													font-size: r(24px)
+							&:hover
+								.user-panel
+									display: block
 						.cart
 							padding: 0 12px 0 12px
 							.cart-panel

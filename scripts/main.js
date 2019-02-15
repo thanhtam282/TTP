@@ -635,10 +635,19 @@ let nav = {
 
 ///////// MAIN Control /////
 $(document).ready(function () {
-	
+	if ( $('header .logined li').length == 0 ){
+		$('header .logined').addClass('deactive')
+		$('header .logined').removeClass('active')
+		
+	} else {
+		$('header .logined').addClass('active')
+		$('header .logined').removeClass('deactive')
+
+	}
 	moveSearch();
 	movehotline();
 	moveCart();
+	moveUser();
 	moveLanguage();
 	turnoffSearch();
 	toggleMainNav();
